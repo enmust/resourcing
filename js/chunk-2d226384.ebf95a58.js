@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d226384"],{e872:function(e,n,t){"use strict";t.r(n);var u=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("div",{staticClass:"knowledge-hub"},[e._v("Knowledge Hub")])},l=[],s={name:"KnowledgeHub"},a=s,c=t("2877"),o=Object(c["a"])(a,u,l,!1,null,"172fe146",null);n["default"]=o.exports}}]);
-//# sourceMappingURL=chunk-2d226384.ebf95a58.js.map
