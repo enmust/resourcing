@@ -1,5 +1,6 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="about" v-if="$route.name === 'About'">
+    About
   </div>
+  <router-view v-else />
 </template>
