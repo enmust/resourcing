@@ -5,7 +5,7 @@
     <app-header />
 
     <v-main class="main">
-      <v-container fluid class="primary2 pa-0">
+      <v-container fluid class="pa-0" :class="bodyColor">
         <v-sheet
           color="accent3"
           height="38"
@@ -14,6 +14,14 @@
         ></v-sheet>
 
         <router-view class="pa-3" />
+
+        <v-sheet
+          v-if="showBottomSheet"
+          color="accent3"
+          height="38"
+          width="100%"
+          class="bottom-sheet"
+        ></v-sheet>
       </v-container>
     </v-main>
 
@@ -27,7 +35,20 @@ import AppFooter from "./components/app_markup/AppFooter";
 import TopToolbar from "./components/app_markup/TopToolbar";
 export default {
   name: "App",
-  components: { TopToolbar, AppFooter, AppHeader }
+  components: { TopToolbar, AppFooter, AppHeader },
+  computed: {
+    bodyColor() {
+      let name = this.$route.name;
+      if (name === "Events") return "primary5";
+      else return "primary2";
+    },
+
+    showBottomSheet() {
+      let name = this.$route.name;
+      if (name === "Events") return true;
+      else return false;
+    }
+  }
 };
 </script>
 
@@ -58,7 +79,12 @@ export default {
 }
 
 .container {
-  height: 100%;
+  /*height: 100%;*/
+}
+
+.bottom-sheet {
+  -webkit-box-shadow: 0px -2px 4px -1px rgba(0, 0, 0, 0.2), 0px -4px 5px 0px rgba(0, 0, 0, 0.14), 0px -1px 10px 0px rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0px -2px 4px -1px rgba(0, 0, 0, 0.2), 0px -4px 5px 0px rgba(0, 0, 0, 0.14), 0px -1px 10px 0px rgba(0, 0, 0, 0.12) !important;
 }
 
 #app .text-h1,

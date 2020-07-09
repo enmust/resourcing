@@ -2,14 +2,17 @@
   "name": "resourcing",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://enmust.github.io/resourcing",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.1",
     "core-js": "^3.6.5",
+    "gh-pages": "^3.1.0",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuetify": "^2.2.11"

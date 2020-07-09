@@ -34,7 +34,7 @@
           </v-btn>
         </template>
 
-        <v-list color="primary" dark>
+        <v-list color="primary2" dark>
           <v-list-item to="/about" exact>
             <v-list-item-title>ABOUT</v-list-item-title>
           </v-list-item>
