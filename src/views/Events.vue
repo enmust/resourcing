@@ -62,12 +62,12 @@
       </v-row>
     </v-card>
 
-    <v-card color="primary3" elevation="4" class="mb-2">
+    <v-card color="primary3" elevation="4" class="mb-2 mt-4" height="600">
       <v-card-title class="white--text text-h4 pb-1"
         >Events at a glance</v-card-title
       >
 
-      <v-row no-gutters class="px-2 pb-2">
+      <v-row no-gutters class="px-2 pb-2" v-if="false" >
         <v-col
           cols="12"
           sm="6"
@@ -102,7 +102,7 @@
 export default {
   name: "Events",
   data: () => ({
-    physicalEvents: ["Conferences / Labs", "Roadmap Workshops", "Flagship"],
+    physicalEvents: ["Conferences", "Roadmap Workshops", "Flagship Labs"],
     projectEvents: ["Virtual Conferences", "Webinars", "Webcasts"],
     testImages: [
       "pilt1",

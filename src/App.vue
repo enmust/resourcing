@@ -10,17 +10,17 @@
           color="accent3"
           height="38"
           width="100%"
-          elevation="4"
+          class="drop-shadow"
         ></v-sheet>
 
-        <router-view class="pa-3" />
+        <router-view :class="{ 'pa-3': $route.name !== 'Home' }" />
 
         <v-sheet
           v-if="showBottomSheet"
           color="accent3"
           height="38"
           width="100%"
-          class="bottom-sheet"
+          class="drop-shadow"
         ></v-sheet>
       </v-container>
     </v-main>
@@ -39,7 +39,7 @@ export default {
   computed: {
     bodyColor() {
       let name = this.$route.name;
-      if (name === "Events") return "primary5";
+      if (name === "Events" || name === "Home") return "primary5";
       else return "primary2";
     },
 
@@ -83,8 +83,10 @@ export default {
 }
 
 .bottom-sheet {
-  -webkit-box-shadow: 0px -2px 4px -1px rgba(0, 0, 0, 0.2), 0px -4px 5px 0px rgba(0, 0, 0, 0.14), 0px -1px 10px 0px rgba(0, 0, 0, 0.12) !important;
-  box-shadow: 0px -2px 4px -1px rgba(0, 0, 0, 0.2), 0px -4px 5px 0px rgba(0, 0, 0, 0.14), 0px -1px 10px 0px rgba(0, 0, 0, 0.12) !important;
+  -webkit-box-shadow: 0px -2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px -4px 5px 0px rgba(0, 0, 0, 0.14), 0px -1px 10px 0px rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0px -2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px -4px 5px 0px rgba(0, 0, 0, 0.14), 0px -1px 10px 0px rgba(0, 0, 0, 0.12) !important;
 }
 
 #app .text-h1,
@@ -101,5 +103,9 @@ export default {
 #app .text-caption,
 #app .text-overline {
   font-family: "CalibriRegular", sans-serif !important;
+}
+
+.drop-shadow {
+  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.4));
 }
 </style>

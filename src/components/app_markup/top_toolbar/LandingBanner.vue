@@ -5,12 +5,19 @@
         class="project-logo"
         contain
         :src="
-          require('../../../assets/logos/project_logo/re-sourcing_1400px.jpg')
+          require('../../../assets/logos/project_logo/re-sourcing_transparent.png')
         "
       ></v-img>
     </v-col>
-    <v-col cols="12" sm="8">
-      <video class="landing-banner" width="100%" autoplay loop muted>
+    <v-col cols="12" sm="8" align="end">
+      <video
+        class="landing-banner"
+        :class="{ 'object-fit-cover': $vuetify.breakpoint.xsOnly }"
+        :width="$vuetify.breakpoint.xsOnly ? '100%' : ''"
+        autoplay
+        loop
+        muted
+      >
         <source
           :src="require('../../../assets/animation/logo_animation.mp4')"
           type="video/mp4"
@@ -30,6 +37,7 @@ export default {
 .landing-banner,
 .landing-banner > div {
   height: calc(30vh - 38px);
+  background-color: #e4e6e7;
 }
 
 .project-logo {
@@ -37,6 +45,11 @@ export default {
 }
 
 video {
+  /* Todo: Enable cover on small screens */
+  /*object-fit: cover;*/
+}
+
+.object-fit-cover {
   object-fit: cover;
 }
 </style>
