@@ -161,7 +161,41 @@
       </v-col>
 
       <v-col cols="12" class="pa-2 primary5">
-        TEAM
+        <carousel-3d
+          id="members"
+          :controls-visible="true"
+          :space="400"
+          :height="300"
+        >
+          <slide
+            v-for="(member, index) in members"
+            :index="index"
+            :key="member.name"
+          >
+            <v-card class="d-flex flex-column transparent fill-height">
+              <v-avatar
+                class="align-self-center rounded-circle"
+                v-if="member.img"
+                size="150"
+              >
+                <v-img
+                  style="background-position: top"
+                  :class="member.name.replace(/ /g, '_').toLowerCase()"
+                  aspect-ratio="1"
+                  :src="member.img"
+                ></v-img>
+              </v-avatar>
+
+              <v-card-text class="text-center py-2">
+                <div class="font-weight-bold text-h5 mb-2">
+                  {{ member.name }}
+                </div>
+                <div class="text-body-1 mb-1">{{ member.institute }}</div>
+                <div class="text-body-2">{{ member.job }}</div>
+              </v-card-text>
+            </v-card>
+          </slide>
+        </carousel-3d>
       </v-col>
 
       <v-col
@@ -261,11 +295,128 @@
 </template>
 
 <script>
+import { Carousel3d, Slide } from "vue-carousel-3d";
+
 export default {
   name: "Home",
 
+  components: {
+    Carousel3d,
+    Slide
+  },
+
   data: () => ({
-    usersEmailAddress: ""
+    usersEmailAddress: "",
+    members: [
+      {
+        name: "Bas de Leeuw",
+        institute: "World Resources Forum",
+        job: "Managing Director, Communication and Stakeholder Engagement",
+        img: require("../assets/img/members/bas_deleeuw.jpg")
+      },
+      {
+        name: "Mathias Schluep",
+        institute: "World Resources Forum",
+        job: "Program Director, Communication and Stakeholder Engagement",
+        img: require("../assets/img/members/mathias_schluep.jpg")
+      },
+      {
+        name: "Shahrzad Manoochehri",
+        institute: "World Resources Forum",
+        job: "Project Manager, Communication and Stakeholder Engagement",
+        img: require("../assets/img/members/shahrzad_manoocheri.jpg")
+      },
+      {
+        name: "Gerald Berger",
+        institute:
+          "Institute for Managing Sustainability, Vienna University of Economics and Business",
+        job: "Project coordination & event and peer learning design",
+        img: require("../assets/img/members/gerald_berger.jpg")
+      },
+      {
+        name: "Andreas Endl",
+        institute: "Vienna University of Economics and Business",
+        job: "Project coordination & research",
+        img: require("../assets/img/members/andreas_endl.jpg")
+      },
+      {
+        name: "Tobias Kind",
+        institute: "World Wide Fund For Nature (WWF) Germany",
+        job: "Global Lead Mining & Metals",
+        img: require("../assets/img/members/tobias_kind.jpg")
+      },
+      {
+        name: "Esther Laabs",
+        institute: "EIT RawMaterials GmbH",
+        job: "Project Manager Innovation",
+        img: require("../assets/img/members/esther_laabs.jpg")
+      },
+      {
+        name: "Patrick Nadoll",
+        institute: "EIT RawMaterials GmbH",
+        job: "Senior Adviser/Exploration and Resource Assessment",
+        img: require("../assets/img/members/patrick_nadoll.jpeg")
+      },
+      {
+        name: "Annika Glatz",
+        institute:
+          "AHK Chile (German-Chilean Chamber of Commerce and Industry)",
+        job: "Leader Mining & Sustainability",
+        img: require("../assets/img/members/annika_glatz.jpg")
+      },
+      {
+        name: "Iris Wunderlich",
+        institute:
+          "AHK Chile (German-Chilean Chamber of Commerce and Industry)",
+        job: "Senior Project Manager Energy, Mining & Sustainability",
+        img: require("../assets/img/members/iris_wunderlich.jpg")
+      },
+      {
+        name: "Peter Dolega",
+        institute: "Öko-Institut e.V.",
+        job: "Researcher with focus on resources and mobility",
+        img: require("../assets/img/members/peter_dolega.jpg")
+      },
+      {
+        name: "Stefanie Degreif",
+        institute: "Öko-Institut e.V.",
+        job: "Researcher, Division Resources & Transport",
+        img: require("../assets/img/members/stefanie_degreif.jpg")
+      },
+      {
+        name: "Michael Tost",
+        institute: "Montan Universität Leoben",
+        job:
+          "Chair of Mining Engineering and Mineral Economics, Senior Researcher, Project Manager",
+        img: require("../assets/img/members/michael_tost.jpg")
+      },
+      {
+        name: "Marie-Theres Kügerl",
+        institute: "Montan Universität Leoben",
+        job:
+          "Chair of Mining Engineering and Mineral Economics, Junior Researcher",
+        img: require("../assets/img/members/marie-theres_kugerl.jpg")
+      },
+      {
+        name: "Noé Barriere",
+        institute: "Vienna University of Economics of Business",
+        job: "Peer learning on innovative business cases",
+        img: require("../assets/img/members/noe_barriere.jpg")
+      },
+      {
+        name: "Alexander Graf",
+        institute:
+          "Institute for Managing Sustainability, Vienna University of Economics and Business",
+        job: "Project Coordination & Research",
+        img: require("../assets/img/members/alexander_graf.jpg")
+      },
+      {
+        name: "Masuma Farooki",
+        institute: "MineHutte",
+        job: "Consulting Director",
+        img: require("../assets/img/members/masuma_farooki.jpg")
+      }
+    ]
   }),
 
   methods: {
@@ -295,7 +446,12 @@ export default {
     0px 0px 10px 0px rgba(0, 0, 0, 0.14), 0px 0px 20px 0px rgba(0, 0, 0, 0.12) !important;
 }
 
-.test {
-  height: calc(100% / 56.25);
+#members .carousel-3d-slide {
+  background-color: transparent !important;
+  border: unset !important;
+}
+
+.peter_dolega .v-image__image, .stefanie_degreif .v-image__image {
+  background-position: top !important;
 }
 </style>
