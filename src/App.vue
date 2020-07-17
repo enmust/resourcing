@@ -13,7 +13,7 @@
           class="drop-shadow"
         ></v-sheet>
 
-        <router-view :class="{ 'pa-3': $route.name !== 'Home' }" />
+        <router-view :class="{ 'pa-3': $route.name !== 'Home' || $route.name !== 'About' }" />
 
         <v-sheet
           v-if="showBottomSheet"
@@ -39,7 +39,7 @@ export default {
   computed: {
     bodyColor() {
       let name = this.$route.name;
-      if (name === "Events" || name === "Home") return "primary5";
+      if (name === "Events" || name === "Home" || name === "About") return "primary5";
       else return "primary2";
     },
 
@@ -79,7 +79,7 @@ export default {
 }
 
 .container {
-  /*height: 100%;*/
+  height: 100%;
 }
 
 .bottom-sheet {
