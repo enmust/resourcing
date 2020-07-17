@@ -116,14 +116,92 @@
         </v-row>
       </v-col>
 
-      <v-col cols="12" md="3" class="d-flex primary2 text-center">
+      <v-col cols="12" md="3" class="d-flex primary2">
         <v-row no-gutters class="my-3">
-          <v-col cols="12">
-            Latest news
+          <v-col cols="12" class="px-5 py-3">
+            <v-card>
+              <v-card-title class="text-h5 primary--text"
+                >Latest news</v-card-title
+              >
+
+              <v-card-text>
+                <div class="d-flex justify-center">
+                  <v-img
+                    contain
+                    max-width="400"
+                    aspect-ratio="1.778"
+                    :src="require('../assets/img/news/news.jpg')"
+                  ></v-img>
+                </div>
+
+                <div class="mt-2 text-h6">
+                  <a
+                    href="https://www.wu.ac.at/en/sustainability/news-details/detail/eu-project-re-sourcing-successful-project-kick-off-meeting-at-the-wu-vienna"
+                    target="NewsWindow"
+                    >EU project RE-SOURCING: Successful project Kick-off meeting
+                    at the WU Vienna</a
+                  >
+                </div>
+              </v-card-text>
+
+              <v-card-actions class="d-flex flex-wrap">
+                <v-btn
+                  small
+                  @click="$vuetify.goTo('.subscribe')"
+                  color="accent3"
+                >
+                  Subscribe
+                </v-btn>
+                <v-spacer />
+
+                <v-btn icon>
+                  <v-icon style="color: #2867B2">fab fa-linkedin</v-icon>
+                </v-btn>
+
+                <v-btn icon>
+                  <v-icon style="color: #1DA1F2">fab fa-twitter</v-icon>
+                </v-btn>
+
+                <v-btn icon>
+                  <v-icon style="color: #4267B2">fab fa-facebook</v-icon>
+                </v-btn>
+
+                <v-btn icon>
+                  <v-icon style="color: #FF0000">fab fa-youtube</v-icon>
+                </v-btn>
+
+                <v-btn icon>
+                  <v-icon>fab fa-instagram</v-icon>
+                </v-btn>
+              </v-card-actions>
+            </v-card>
           </v-col>
 
-          <v-col cols="12">
-            Upcoming news
+          <v-col cols="12" class="px-5 py-3">
+            <v-card>
+              <v-card-title class="text-h5 primary--text"
+                >Upcoming news</v-card-title
+              >
+
+              <v-card-text>
+                <div class="d-flex justify-center">
+                  <v-img
+                    contain
+                    max-width="400"
+                    aspect-ratio="1.778"
+                    :src="
+                      require('../assets/logos/project_logo/re-sourcing_transparent.png')
+                    "
+                  ></v-img>
+                </div>
+
+                <div class="mt-2 text-h6">
+                  <span
+                    >Register to our opening conference at Vienna, Austria</span
+                  >
+                </div>
+              </v-card-text>
+            </v-card>
           </v-col>
         </v-row>
       </v-col>
@@ -201,7 +279,7 @@
       <v-col
         cols="12"
         md="9"
-        class="py-3 text-center white--text"
+        class="py-3 text-center white--text subscribe"
         :class="{
           'px-5': $vuetify.breakpoint.smAndDown,
           'px-12': $vuetify.breakpoint.mdAndUp
@@ -451,7 +529,40 @@ export default {
   border: unset !important;
 }
 
-.peter_dolega .v-image__image, .stefanie_degreif .v-image__image {
+.peter_dolega .v-image__image,
+.stefanie_degreif .v-image__image {
   background-position: top !important;
+}
+
+.fa-instagram {
+  color: transparent;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #ffdc80 0%,
+    #fcaf45 10%,
+    #f77737 20%,
+    #f56040 30%,
+    #fd1d1d 40%,
+    #e1306c 50%,
+    #c13584 60%,
+    #833ab4 70%,
+    #5851db 80%,
+    #405de6 90%
+  );
+  background: -webkit-radial-gradient(
+    circle at 30% 107%,
+    #ffdc80 0%,
+    #fcaf45 10%,
+    #f77737 20%,
+    #f56040 30%,
+    #fd1d1d 40%,
+    #e1306c 50%,
+    #c13584 60%,
+    #833ab4 70%,
+    #5851db 80%,
+    #405de6 90%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 </style>
