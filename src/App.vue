@@ -13,7 +13,7 @@
           class="drop-shadow"
         ></v-sheet>
 
-        <router-view :class="{ 'pa-3': $route.name !== 'Home' || $route.name !== 'About' }" />
+        <router-view :class="{ 'pa-3': addPaddingToRouteView }" />
 
         <v-sheet
           v-if="showBottomSheet"
@@ -39,7 +39,8 @@ export default {
   computed: {
     bodyColor() {
       let name = this.$route.name;
-      if (name === "Events" || name === "Home" || name === "About") return "primary5";
+      if (name === "Events" || name === "Home" || name === "About" || name === "Purpose and objectives")
+        return "primary5";
       else return "primary2";
     },
 
@@ -47,6 +48,13 @@ export default {
       let name = this.$route.name;
       if (name === "Events") return true;
       else return false;
+    },
+
+    addPaddingToRouteView() {
+      const name = this.$route.name;
+      return (
+        name !== "Home" && name !== "About" && name !== "Purpose and objectives"
+      );
     }
   }
 };

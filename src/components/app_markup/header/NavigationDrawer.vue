@@ -15,6 +15,7 @@
         :key="item.text"
         :title="item.text"
         :to="item.url"
+        exact
       >
         <v-list-item-action>
           <v-icon>{{ item.icon }}</v-icon>

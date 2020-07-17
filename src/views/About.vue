@@ -10,7 +10,7 @@
           'px-12': $vuetify.breakpoint.mdAndUp
         }"
       >
-        <div class="text-h5 primary--text font-weight-bold">
+        <div class="text-h5 primary--text font-weight-bold mt-2">
           RE-SOURCING will deliver...
         </div>
 
