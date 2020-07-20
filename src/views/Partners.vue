@@ -125,7 +125,7 @@
             >
               <v-card class="d-flex flex-row" elevation="4" color="primary5">
                 <v-avatar
-                  color="accent2"
+                  color="accent"
                   size="62"
                   class="rounded-circle align-self-center ma-3 elevation-4"
                 >
@@ -262,6 +262,46 @@ export default {
         name: "UMICORE",
         title: "Christian Hagelükken",
         img: ""
+      },
+      {
+        name: "Rodrigo Cortes Lobos",
+        title: "Advanced Mining Technology Centre Chile",
+        img: ""
+      },
+      {
+        name: "Fleming Voetmann",
+        title: "International Copper Association",
+        img: ""
+      },
+      {
+        name: "Alejadro Gonzalez",
+        title: "GoodElectronics Network / SOMO",
+        img: ""
+      },
+      {
+        name: "Grainne Ui Thuama",
+        title: "Department: Communications, Climate Action, Environment -IE",
+        img: ""
+      },
+      {
+        name: "Renate Schoofs",
+        title: "Department of Environment and Spatial Planning (BE:FLanders)",
+        img: ""
+      },
+      {
+        name: "Diamantoula Lampou",
+        title: "Ministry of Environment and Energy (GR)",
+        img: ""
+      },
+      {
+        name: "Carolin Kranz",
+        title: "BASF",
+        img: ""
+      },
+      {
+        name: "Mark Mistry",
+        title: "Nickel Institute",
+        img: ""
       }
     ],
     advisoryBoard: [
@@ -294,6 +334,16 @@ export default {
       {
         name: "World Bank",
         title: "Kristen Hund",
+        img: ""
+      },
+      {
+        name: "Giulia Carbone",
+        title: "IUCN / Internation Union for Conservative of Nature",
+        img: ""
+      },
+      {
+        name: "Aimee Boulanger",
+        title: "IRMA / Initiative for Responsivle Mining Assurance",
         img: ""
       }
     ]
