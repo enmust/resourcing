@@ -306,7 +306,7 @@ export default {
     ],
     advisoryBoard: [
       {
-        name: "Michal Spiechowicz",
+        name: "Debby de Roover & Daniel Cios",
         title: "DG GROW, EIP Raw Materials",
         img: ""
       },
