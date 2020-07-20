@@ -1,5 +1,13 @@
 <template>
-  <v-app-bar class="app-bar" dark app color="primary2" absolute height="56">
+  <v-app-bar
+    class="app-bar"
+    dark
+    app
+    color="primary2"
+    absolute
+    height="56"
+    :style="`margin-top: ${appBarMarginTop}px`"
+  >
     <v-app-bar-nav-icon
       @click.stop="$emit('update:drawer')"
       aria-label="Open navigation drawer"
@@ -60,7 +68,8 @@
 export default {
   name: "AppBar",
   data: () => ({
-    aboutDropdown: false
+    aboutDropdown: false,
+    appBarMarginTop: 358
   }),
   computed: {
     aboutIsActive() {
@@ -72,17 +81,37 @@ export default {
       );
     }
   },
+  mounted() {
+    this.handleResize();
+    window.addEventListener("resize", this.handleResize);
+  },
+  beforeDestroy() {
+    window.addEventListener("resize", this.handleResize);
+  },
   methods: {
     goToHomePage() {
       if (this.$route.name !== "Home") this.$router.push({ path: "/" });
+    },
+    handleResize() {
+      const TOOLBAR_MARGIN_TOP = 38.33;
+      let video = document.getElementsByClassName("project-video");
+
+      if (video && window.innerWidth < 960) {
+        let videoHeight = video[0].clientHeight;
+        this.appBarMarginTop = videoHeight + TOOLBAR_MARGIN_TOP;
+      } else {
+        this.appBarMarginTop = 358;
+      }
     }
   }
 };
 </script>
 
 <style scoped>
-.app-bar {
-  margin-top: 30vh !important;
+@media only screen and (min-width: 960px) {
+  .app-bar {
+    margin-top: 358px !important;
+  }
 }
 
 .title-link {

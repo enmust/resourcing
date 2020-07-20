@@ -1,6 +1,6 @@
 <template>
-  <v-row class="landing-banner" no-gutters>
-    <v-col class="hidden-xs-only pa-3" sm="4">
+  <div class="d-flex" no-gutters>
+    <div class="hidden-logo pa-3 align-self-center">
       <v-img
         class="project-logo"
         contain
@@ -8,23 +8,19 @@
           require('../../../assets/logos/project_logo/re-sourcing_transparent.png')
         "
       ></v-img>
-    </v-col>
-    <v-col cols="12" sm="8" align="end">
-      <video
-        class="landing-banner"
-        :class="{ 'object-fit-cover': $vuetify.breakpoint.xsOnly }"
-        :width="$vuetify.breakpoint.xsOnly ? '100%' : ''"
-        autoplay
-        loop
-        muted
-      >
+    </div>
+
+    <div class="custom-flex-grow-1"></div>
+
+    <div class="project-video">
+      <video autoplay loop muted>
         <source
-          :src="require('../../../assets/animation/logo_animation.mp4')"
+          :src="require('../../../assets/animation/animation_960x320.mp4')"
           type="video/mp4"
         />
       </video>
-    </v-col>
-  </v-row>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -36,20 +32,49 @@ export default {
 <style scoped>
 .landing-banner,
 .landing-banner > div {
-  height: calc(30vh - 38px);
-  background-color: #e4e6e7;
+  max-height: 320px;
 }
 
 .project-logo {
-  height: calc(30vh - 62px);
+  max-height: 296px;
+  max-width: 456px;
 }
 
+.project-video,
 video {
-  /* Todo: Enable cover on small screens */
-  /*object-fit: cover;*/
+  max-height: 320px;
 }
 
-.object-fit-cover {
-  object-fit: cover;
+@media only screen and (max-width: 960px) {
+  video {
+    object-position: center;
+    height: 100%;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1439px) {
+  video {
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 1439px) {
+  .hidden-logo {
+    display: none !important;
+  }
+
+  video {
+    width: 100%;
+  }
+
+  .project-video {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .custom-flex-grow-1 {
+    flex-grow: 1 !important;
+  }
 }
 </style>
