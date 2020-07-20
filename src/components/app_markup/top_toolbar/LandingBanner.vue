@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex" no-gutters>
+  <div class="d-flex landing-banner" no-gutters>
     <div class="hidden-logo pa-3 align-self-center">
       <v-img
         class="project-logo"
@@ -49,6 +49,7 @@ video {
   video {
     object-position: center;
     height: 100%;
+    object-fit: cover;
   }
 }
 

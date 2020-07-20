@@ -39,7 +39,7 @@ export default {
   computed: {
     bodyColor() {
       let name = this.$route.name;
-      if (name === "Events" || name === "Home" || name === "About" || name === "Purpose and objectives")
+      if (name === "Events" || name === "Home" || name === "About" || name === "Purpose and objectives" || name === "Partners")
         return "primary5";
       else return "primary2";
     },
@@ -53,7 +53,7 @@ export default {
     addPaddingToRouteView() {
       const name = this.$route.name;
       return (
-        name !== "Home" && name !== "About" && name !== "Purpose and objectives"
+        name !== "Home" && name !== "About" && name !== "Purpose and objectives" && name !== "Partners"
       );
     }
   }

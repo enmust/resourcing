@@ -7,6 +7,7 @@
     absolute
     height="56"
     :style="`margin-top: ${appBarMarginTop}px`"
+    ref="appBar"
   >
     <v-app-bar-nav-icon
       @click.stop="$emit('update:drawer')"
@@ -65,6 +66,8 @@
 </template>
 
 <script>
+import { debounce } from "lodash";
+
 export default {
   name: "AppBar",
   data: () => ({
@@ -85,6 +88,12 @@ export default {
     this.handleResize();
     window.addEventListener("resize", this.handleResize);
   },
+  updated: debounce(function() {
+    this.$nextTick(() => {
+      // console.log("handleResize");
+      this.handleResize();
+    });
+  }, 250),
   beforeDestroy() {
     window.addEventListener("resize", this.handleResize);
   },
@@ -93,7 +102,7 @@ export default {
       if (this.$route.name !== "Home") this.$router.push({ path: "/" });
     },
     handleResize() {
-      const TOOLBAR_MARGIN_TOP = 38.33;
+      const TOOLBAR_MARGIN_TOP = 38;
       let video = document.getElementsByClassName("project-video");
 
       if (video && window.innerWidth < 960) {
