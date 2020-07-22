@@ -5,6 +5,18 @@
         >Physical events</v-card-title
       >
 
+      <v-row>
+        <v-col cols="12" sm="12" md="8" lg="6">
+          <v-card-text class="text-body-1 py-0">
+            The RE:SOURCING project will host eleven physical events: three
+            Flagship Labs (Amsterdam, Leoben, Darmstadt), two Conferences (in
+            Brussels and Vienna), three Roadmap Workshops (Brussels), three
+            Global Advocacy Fora (Chile, South Africa, China), several online
+            webinars and consultations for the RE:SOURCING platform.
+          </v-card-text>
+        </v-col>
+      </v-row>
+
       <v-row no-gutters>
         <v-col
           cols="12"
@@ -21,10 +33,23 @@
                 max-width="500"
               >
               </v-img>
-              <v-card-title
-                class="primary--text font-weight-bold text-uppercase justify-end"
-                >{{ event }}</v-card-title
-              >
+
+              <v-card-actions class="pa-0">
+                <v-card-title
+                  class="primary--text font-weight-bold text-uppercase justify-end pb-1"
+                  >{{ event.title }}</v-card-title
+                >
+                <v-spacer />
+
+                <v-btn icon @click="event.showInfo = !event.showInfo">
+                  <v-icon v-if="event.showInfo">fas fa-angle-up</v-icon>
+                  <v-icon v-else>fas fa-angle-down</v-icon>
+                </v-btn>
+              </v-card-actions>
+
+              <v-card-text class="text-body-1" v-if="event.showInfo">
+                {{ event.text }}
+              </v-card-text>
             </v-card>
           </v-hover>
         </v-col>
@@ -52,10 +77,23 @@
                 max-width="500"
               >
               </v-img>
-              <v-card-title
-                class="primary--text font-weight-bold text-uppercase justify-end"
-                >{{ event }}</v-card-title
-              >
+
+              <v-card-actions class="pa-0">
+                <v-card-title
+                  class="primary--text font-weight-bold text-uppercase justify-end pb-1"
+                  >{{ event.title }}</v-card-title
+                >
+                <v-spacer />
+
+                <v-btn icon @click="event.showInfo = !event.showInfo">
+                  <v-icon v-if="event.showInfo">fas fa-angle-up</v-icon>
+                  <v-icon v-else>fas fa-angle-down</v-icon>
+                </v-btn>
+              </v-card-actions>
+
+              <v-card-text class="text-body-1" v-if="event.showInfo">
+                {{ event.text }}
+              </v-card-text>
             </v-card>
           </v-hover>
         </v-col>
@@ -67,7 +105,7 @@
         >Events at a glance</v-card-title
       >
 
-      <v-row no-gutters class="px-2 pb-2" v-if="false" >
+      <v-row no-gutters class="px-2 pb-2" v-if="false">
         <v-col
           cols="12"
           sm="6"
@@ -102,8 +140,46 @@
 export default {
   name: "Events",
   data: () => ({
-    physicalEvents: ["Conferences", "Roadmap Workshops", "Flagship Labs"],
-    projectEvents: ["Virtual Conferences", "Webinars", "Webcasts"],
+    physicalEvents: [
+      {
+        title: "Conferences",
+        showInfo: false,
+        text:
+          "Two physical Conferences will aim to ensure continued and more personal, face to face networking opportunities for stakeholders. The conference will incorporate top-level keynotes, lively panel discussions, interactive working groups and attract over 300 participants from all over the globe."
+      },
+      {
+        title: "Roadmap Workshops",
+        showInfo: false,
+        text:
+          "The 3 Sector Roadmap Workshops will bring together about 100 key decision-makers in industry, policy, business and civil society. The roadmap workshops will generate content in the key areas of the roadmap. One of the main goals is to create ownership of the process for targeted sector stakeholders and initiatives and ensure applicability of Sectoral Roadmaps for future implementation."
+      },
+      {
+        title: "Flagship Labs",
+        showInfo: false,
+        text:
+          "RE-SOURCING will organise three sector-specific Flagship Lab Workshops for peer learning. Peer learning will serve to: 1) learn from good practice in FS cases; 2) develop an action catalogue for unresolved challenges in the FS cases; and 3) provide input to contextualise and generalise good practice factors in other organisational and EU MS settings (in preparation to Good Practice Guidance Reports)."
+      }
+    ],
+    projectEvents: [
+      {
+        title: "Virtual Conferences",
+        showInfo: false,
+        text:
+          "2 virtual events will incorporate top-level webcasts, live keynotes, a virtual exhibition, webinars and Q&A bulletin boards and attract over 500 participants from all over the globe."
+      },
+      {
+        title: "Webinars",
+        showInfo: false,
+        text:
+          "2 virtual events will incorporate top-level webcasts, live keynotes, a virtual exhibition, webinars and Q&A bulletin boards and attract over 500 participants from all over the globe."
+      },
+      {
+        title: "Webcasts",
+        showInfo: false,
+        text:
+          "2 virtual events will incorporate top-level webcasts, live keynotes, a virtual exhibition, webinars and Q&A bulletin boards and attract over 500 participants from all over the globe."
+      }
+    ],
     testImages: [
       "pilt1",
       "pilt2",
