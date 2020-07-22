@@ -64,13 +64,19 @@
 
               <v-card-text class="text-body-1">
                 These three sectors represent essential priorities in the
-                European long-term vision: the <span class="accent2--text font-weight-bold">Mobility</span> sector for clean
-                mobility and <span class="accent--text font-weight-bold">Renewable energy</span> for the fully decarbonised energy
-                supply. The <span class="accent3--text font-weight-bold">EEE-sector</span> reflects the relevant questions on the
-                conflict mineral regulation. Their contribution is essential to
-                achieving the targets that have been set by the EU Green Deal.
-                To ensure that the ‘output’ from these sectors contributes to
-                the sustainability agenda, responsible sourcing practices within
+                European long-term vision: the
+                <span class="accent2--text font-weight-bold">Mobility</span>
+                sector for clean mobility and
+                <span class="accent--text font-weight-bold"
+                  >Renewable energy</span
+                >
+                for the fully decarbonised energy supply. The
+                <span class="accent3--text font-weight-bold">EEE-sector</span>
+                reflects the relevant questions on the conflict mineral
+                regulation. Their contribution is essential to achieving the
+                targets that have been set by the EU Green Deal. To ensure that
+                the ‘output’ from these sectors contributes to the
+                sustainability agenda, responsible sourcing practices within
                 these sectors need to be strengthened.
               </v-card-text>
             </v-card>
@@ -346,16 +352,19 @@
 
               <ul>
                 <li>
-                  <b class="primary--text">3TG (Tin, Tungsten, Tantalum, Gold)</b>: They have high relevance
-                  due to legislation (OECD, EU, Dodd-Frank) that governs RS
-                  practices and they have high industry consumption and function
-                  criticality (tin, tantalum) for EEE products.
+                  <b class="primary--text"
+                    >3TG (Tin, Tungsten, Tantalum, Gold)</b
+                  >: They have high relevance due to legislation (OECD, EU,
+                  Dodd-Frank) that governs RS practices and they have high
+                  industry consumption and function criticality (tin, tantalum)
+                  for EEE products.
                 </li>
 
                 <li>
-                  <b class="primary--text">Mica</b>: It has high relevance of the mineral for EEE (as well as
-                  the mobility sector) and there is also severe sustainability
-                  risks associated with its extraction.
+                  <b class="primary--text">Mica</b>: It has high relevance of
+                  the mineral for EEE (as well as the mobility sector) and there
+                  is also severe sustainability risks associated with its
+                  extraction.
                 </li>
               </ul>
             </div>
