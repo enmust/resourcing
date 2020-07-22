@@ -64,9 +64,9 @@
 
               <v-card-text class="text-body-1">
                 These three sectors represent essential priorities in the
-                European long-term vision: the Mobility sector for clean
-                mobility and Renewable energy for the fully decarbonised energy
-                supply. The EEE-sector reflects the relevant questions on the
+                European long-term vision: the <span class="accent2--text font-weight-bold">Mobility</span> sector for clean
+                mobility and <span class="accent--text font-weight-bold">Renewable energy</span> for the fully decarbonised energy
+                supply. The <span class="accent3--text font-weight-bold">EEE-sector</span> reflects the relevant questions on the
                 conflict mineral regulation. Their contribution is essential to
                 achieving the targets that have been set by the EU Green Deal.
                 To ensure that the ‘output’ from these sectors contributes to
