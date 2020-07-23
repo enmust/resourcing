@@ -194,12 +194,6 @@
                     "
                   ></v-img>
                 </div>
-
-                <div class="mt-2 text-h6">
-                  <span
-                    >Register to our opening conference at Vienna, Austria</span
-                  >
-                </div>
               </v-card-text>
             </v-card>
           </v-col>
