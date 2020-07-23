@@ -87,11 +87,11 @@
             <v-row>
               <v-col cols="12" sm="12" md="8" lg="6">
                 <div class="text-body-1">
-                  <b class="font-weight-bold">RE-SOURCING in social media</b>: (E-newsletters, Twitter,
-                  LinkedIN, Facebook. RE-SOURCING will use social media outlets
-                  to ensure wider outreach and dissemination of project
-                  activities and results under these selected hashtags
-                  (#RESOURCING; #Horizon2020project; etc.).
+                  <b class="font-weight-bold">RE-SOURCING in social media</b>:
+                  (E-newsletters, Twitter, LinkedIN, Facebook. RE-SOURCING will
+                  use social media outlets to ensure wider outreach and
+                  dissemination of project activities and results under these
+                  selected hashtags (#RESOURCING; #Horizon2020project; etc.).
                 </div>
               </v-col>
             </v-row>
