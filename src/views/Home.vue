@@ -332,35 +332,56 @@
       </v-col>
 
       <v-col cols="12" md="6" class="px-3 pt-3 pb-5">
-        <div class="text-h6 font-weight-bold primary--text mb-5">
+        <div class="text-h6 font-weight-bold primary--text mt-3">
           The latest news...
         </div>
 
-        <div
-          class="d-flex flex-row flex-wrap flex-md-nowrap justify-space-around align-self-center"
-        >
-          <v-hover v-slot:default="{ hover }">
-            <v-card class="py-2 px-3" :elevation="hover ? 12 : 4" hover>
-              <v-icon style="color: #2867B2" x-large>fab fa-linkedin-in</v-icon>
-            </v-card>
-          </v-hover>
-
-          <v-hover v-slot:default="{ hover }">
-            <v-card class="py-2 px-3" :elevation="hover ? 12 : 4" hover>
-              <v-icon style="color: #4267B2" x-large
-                >fab fa-facebook-square</v-icon
+        <v-row>
+          <v-col cols="12" sm="4">
+            <v-hover v-slot:default="{ hover }">
+              <v-card
+                class="py-2 px-3 d-flex justify-center"
+                :elevation="hover ? 12 : 4"
+                hover
+                min-height="250"
               >
-            </v-card>
-          </v-hover>
+                <v-icon style="color: #2867B2" x-large
+                  >fab fa-linkedin-in</v-icon
+                >
+              </v-card>
+            </v-hover>
+          </v-col>
 
-          <v-hover v-slot:default="{ hover }">
-            <v-card class="py-2 px-3" :elevation="hover ? 12 : 4" hover>
-              <v-icon style="color: #1DA1F2" x-large
-                >fab fa-twitter-square</v-icon
+          <v-col cols="12" sm="4">
+            <v-hover v-slot:default="{ hover }">
+              <v-card
+                class="py-2 px-3 d-flex justify-center"
+                :elevation="hover ? 12 : 4"
+                hover
+                min-height="250"
               >
-            </v-card>
-          </v-hover>
-        </div>
+                <v-icon style="color: #4267B2" x-large
+                  >fab fa-facebook-square</v-icon
+                >
+              </v-card>
+            </v-hover>
+          </v-col>
+
+          <v-col cols="12" sm="4">
+            <v-hover v-slot:default="{ hover }">
+              <v-card
+                class="py-2 px-3 d-flex justify-center"
+                :elevation="hover ? 12 : 4"
+                hover
+                min-height="250"
+              >
+                <v-icon style="color: #1DA1F2" x-large
+                  >fab fa-twitter-square</v-icon
+                >
+              </v-card>
+            </v-hover>
+          </v-col>
+        </v-row>
       </v-col>
     </v-row>
   </div>

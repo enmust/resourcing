@@ -83,6 +83,26 @@ export default {
         url: "/knowledge_hub"
       },
       {
+        icon: "fab fa-wikipedia-w",
+        text: "Wiki on RS",
+        url: "/knowledge_hub/wiki_on_rs"
+      },
+      {
+        icon: "far fa-flag",
+        text: "Flagship cases",
+        url: "/knowledge_hub/flagship_cases"
+      },
+      {
+        icon: "fas fa-road",
+        text: "Roadmaps",
+        url: "/knowledge_hub/roadmaps"
+      },
+      {
+        icon: "fas fa-project-diagram",
+        text: "Sector state of plays",
+        url: "/knowledge_hub/sector_state_of_plays"
+      },
+      {
         icon: "far fa-address-book",
         text: "Contact",
         url: "/contact"

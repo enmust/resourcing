@@ -59,7 +59,40 @@
       <v-btn text to="/target_groups" exact>Target groups</v-btn>
       <v-btn text to="/news" exact>News</v-btn>
       <v-btn text to="/events" exact>Events</v-btn>
-      <v-btn text to="/knowledge_hub" exact>Knowledge hub</v-btn>
+
+      <v-menu v-model="knowledgeHubDropdown" offset-y>
+        <template v-slot:activator="{ on }">
+          <v-btn
+            text
+            v-on="on"
+            :class="knowledgeHubIsActive ? 'v-btn--active' : ''"
+          >
+            Knowledge hub
+            <v-icon right>{{
+              knowledgeHubDropdown ? "fas fa-caret-up" : "fas fa-caret-down"
+            }}</v-icon>
+          </v-btn>
+        </template>
+
+        <v-list color="primary2" dark>
+          <v-list-item to="/knowledge_hub" exact>
+            <v-list-item-title>KNOWLEDGE HUB</v-list-item-title>
+          </v-list-item>
+          <v-list-item to="/knowledge_hub/wiki_on_rs" exact>
+            <v-list-item-title>WIKI ON RS</v-list-item-title>
+          </v-list-item>
+          <v-list-item to="/knowledge_hub/flagship_cases" exact>
+            <v-list-item-title>FLAGSHIP CASES</v-list-item-title>
+          </v-list-item>
+          <v-list-item to="/knowledge_hub/roadmaps" exact>
+            <v-list-item-title>ROADMAPS</v-list-item-title>
+          </v-list-item>
+          <v-list-item to="/knowledge_hub/sector_state_of_plays" exact>
+            <v-list-item-title>SECTOR STATE OF PLAYS</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+
       <v-btn text to="/contact" exact>Contact</v-btn>
     </v-toolbar-items>
   </v-app-bar>
@@ -72,6 +105,7 @@ export default {
   name: "AppBar",
   data: () => ({
     aboutDropdown: false,
+    knowledgeHubDropdown: false,
     appBarMarginTop: 358
   }),
   computed: {
@@ -81,6 +115,17 @@ export default {
         name === "About" ||
         name === "Purpose and objectives" ||
         name === "Partners"
+      );
+    },
+
+    knowledgeHubIsActive() {
+      let name = this.$route.name;
+      return (
+        name === "Knowledge hub" ||
+        name === "Wiki on rs" ||
+        name === "Flagship cases" ||
+        name === "Roadmaps" ||
+        name === "Sector state of plays"
       );
     }
   },

@@ -45,7 +45,29 @@ const routes = [
   {
     path: "/knowledge_hub",
     name: "Knowledge hub",
-    component: () => import("../views/KnowledgeHub.vue")
+    component: () => import("../views/KnowledgeHub.vue"),
+    children: [
+      {
+        path: "wiki_on_rs",
+        name: "Wiki on rs",
+        component: () => import("../views/WikiOnRs.vue")
+      },
+      {
+        path: "flagship_cases",
+        name: "Flagship cases",
+        component: () => import("../views/FlagshipCases.vue")
+      },
+      {
+        path: "roadmaps",
+        name: "Roadmaps",
+        component: () => import("../views/Roadmaps.vue")
+      },
+      {
+        path: "sector_state_of_plays",
+        name: "Sector state of plays",
+        component: () => import("../views/SectorStateOfPlays.vue")
+      }
+    ]
   },
   {
     path: "/contact",

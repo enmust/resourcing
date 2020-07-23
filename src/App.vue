@@ -63,7 +63,12 @@ export default {
         name !== "Home" &&
         name !== "About" &&
         name !== "Purpose and objectives" &&
-        name !== "Partners"
+        name !== "Partners" &&
+        name !== "Knowledge hub" &&
+        name !== "Wiki on rs" &&
+        name !== "Flagship cases" &&
+        name !== "Roadmaps" &&
+        name !== "Sector state of plays"
       );
     }
   }
