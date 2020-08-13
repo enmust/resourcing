@@ -13,11 +13,10 @@
           RE-SOURCING has brought by collaboration by:
         </div>
 
-        <v-row no-gutters class="mt-2">
+        <v-row no-gutters class="mt-2 text-justify">
           <v-col
             cols="12"
-            md="6"
-            xl="4"
+            lg="6"
             v-for="(entity, index) in partners"
             :key="index"
             class="pa-3"
@@ -27,17 +26,19 @@
               flat
               color="transparent"
             >
-              <div class="align-self-center align-self-md-start pa-3">
+              <div class="align-self-center align-self-lg-start pa-3">
                 <v-img
                   aspect-ratio="1"
                   :src="entity.img"
-                  :min-width="$vuetify.breakpoint.xsOnly ? 150 : 100"
+                  :min-width="$vuetify.breakpoint.xsOnly ? 250 : 200"
                   contain
                 ></v-img>
               </div>
 
               <div class="d-flex flex-column">
-                <v-card-title class="primary--text font-weight-bold text-body-1"
+                <v-card-title
+                  class="primary--text font-weight-bold text-body-1"
+                  style="word-break: break-word;"
                   >{{ entity.name }},
                   <a
                     :href="`https://${entity.link}`"
@@ -62,10 +63,10 @@
             class="text-h5 font-weight-bold primary--text d-flex justify-center"
             >Steering Commitee</v-card-title
           >
-          <v-card-text class="text-body-1"
+          <v-card-text class="text-h7 text-justify"
             >The RE-SOURCING Platform Steering Committee (PSC) is a board of
-            high-level and valued experts from organisations with a strong role
-            on Agenda setting & Advocacy for Responsible Sourcing in Europe and
+            high-level valued experts from organisations with a strong role in
+            agenda setting & advocacy for Responsible Sourcing across Europe and
             globally.</v-card-text
           >
 
@@ -77,20 +78,43 @@
               v-for="(entity, index) in steeringCommitee"
               :key="index"
             >
-              <v-card class="d-flex flex-row" elevation="4" color="primary5">
+              <v-card
+                class="d-flex flex-row"
+                elevation="4"
+                color="white"
+                min-height="125"
+              >
+                <div
+                  class="align-self-center"
+                  v-if="entity.img"
+                  :class="{ 'py-2 pl-2': $vuetify.breakpoint.xsOnly }"
+                >
+                  <v-img
+                    v-if="entity.img"
+                    :src="entity.img"
+                    max-width="125"
+                  ></v-img>
+                </div>
+
                 <v-avatar
-                  color="accent2"
+                  v-else
+                  color="primary3"
                   size="62"
                   class="rounded-circle align-self-center ma-3 elevation-4"
                 >
                   <v-icon class="white--text" large>far fa-user</v-icon>
                 </v-avatar>
 
-                <div>
-                  <v-card-title class="pb-1" style="word-break: break-word;">{{
-                    entity.title
-                  }}</v-card-title>
-                  <v-card-text>{{ entity.name }}</v-card-text>
+                <div
+                  class="pl-3 py-2 pr-2 d-flex flex-column fill-height align-self-center"
+                >
+                  <div class="text-body-1 font-weight-bold mb-4">
+                    {{ entity.organisation }}
+                  </div>
+                  <div class="text-body-1 font-weight-bold">
+                    {{ entity.name }}
+                  </div>
+                  <div class="font-italic">{{ entity.title }}</div>
                 </div>
               </v-card>
             </v-col>
@@ -98,6 +122,8 @@
         </v-card>
       </v-col>
     </v-row>
+
+    <!-- Todo: Board member card height should be same -->
 
     <!-- Advisory board -->
     <v-row no-gutters>
@@ -107,12 +133,12 @@
             class="text-h5 font-weight-bold primary--text d-flex justify-center"
             >Advisory Board</v-card-title
           >
-          <v-card-text class="text-body-1">
-            The RE-SOURCING Advisory Board consists of high-level and valued
-            experts who will meet regularly with the RE-SOURCING project. The
-            Advisory Board provides high-level advice to the project, ensuring
-            that all relevant perspectives and aspects are considered in the
-            RE-SOURCING project.
+          <v-card-text class="text-h7 text-justify">
+            The RE-SOURCING Advisory Board consists of high-level valued experts
+            who will meet regularly with the RE-SOURCING project. The Advisory
+            Board provides high-level advice to the project, ensuring that all
+            relevant aspects and perspectives are considered in the RE-SOURCING
+            project.
           </v-card-text>
 
           <v-row no-gutters class="px-2 pb-2">
@@ -123,20 +149,43 @@
               v-for="(entity, index) in advisoryBoard"
               :key="index"
             >
-              <v-card class="d-flex flex-row" elevation="4" color="primary5">
+              <v-card
+                class="d-flex flex-row"
+                elevation="4"
+                color="white"
+                min-height="125"
+              >
+                <div
+                  class="align-self-center"
+                  v-if="entity.img"
+                  :class="{ 'py-2 pl-2': $vuetify.breakpoint.xsOnly }"
+                >
+                  <v-img
+                    v-if="entity.img"
+                    :src="entity.img"
+                    max-width="125"
+                  ></v-img>
+                </div>
+
                 <v-avatar
-                  color="accent"
+                  v-else
+                  color="primary3"
                   size="62"
                   class="rounded-circle align-self-center ma-3 elevation-4"
                 >
                   <v-icon class="white--text" large>far fa-user</v-icon>
                 </v-avatar>
 
-                <div>
-                  <v-card-title class="pb-1" style="word-break: break-word;">{{
-                    entity.title
-                  }}</v-card-title>
-                  <v-card-text>{{ entity.name }}</v-card-text>
+                <div
+                  class="pl-3 py-2 pr-2 d-flex flex-column fill-height align-self-center"
+                >
+                  <div class="text-body-1 font-weight-bold mb-4">
+                    {{ entity.organisation }}
+                  </div>
+                  <div class="text-body-1 font-weight-bold">
+                    {{ entity.name }}
+                  </div>
+                  <div class="font-italic">{{ entity.title }}</div>
                 </div>
               </v-card>
             </v-col>
@@ -234,117 +283,74 @@ export default {
     ],
     steeringCommitee: [
       {
-        name: "Fiona Solomon",
+        name: "Guy Ethier",
         title: "Aluminium Stewardship Initiative",
-        img: ""
+        organisation: "Global Battery Alliance",
+        img: require("../assets/logos/GBA-logo-GreyCircle-RGB-AW.jpg")
       },
       {
-        name: "Matthew Wenban-Smith",
-        title: "Responsible Steel",
-        img: ""
+        name: "Mathy V. Stanislaus, Esq.",
+        title: "Interim Director",
+        organisation: "Global Battery Alliance",
+        img: require("../assets/logos/GBA-logo-GreyCircle-RGB-AW.jpg")
       },
       {
-        name: "Manuel Jose Fernandez",
-        title: "CHOCILCO - Chilean Copper Commission",
-        img: ""
+        name: "Jonathan Eckert",
+        title: "Project Lead",
+        organisation: "Global Battery Alliance",
+        img: require("../assets/logos/GBA-logo-GreyCircle-RGB-AW.jpg")
       },
       {
-        name: "Elene Vyboldina",
-        title: "EUROMETAUX",
-        img: ""
+        name: "Stefan Crets",
+        title: "Executive Director",
+        organisation: "CSR Europe",
+        img: require("../assets/logos/CSR_Europe.jpg")
       },
       {
-        name: "Jani Kiuru",
-        title: "Finnish Minerals Group",
-        img: ""
+        name: "Heike Schulze",
+        title: "Coordinator of Drive Sustainability",
+        organisation: "CSR Europe",
+        img: require("../assets/logos/CSR_Europe.jpg")
       },
       {
-        name: "UMICORE",
-        title: "Christian Hagelükken",
-        img: ""
+        name: "Tobias Persson",
+        title: "Analyst",
+        organisation: "The Swedish Agency for Growth Policy Analysis",
+        img: require("../assets/logos/The_Swedish_Agency_for_Growth_Analysis.jpg")
       },
       {
-        name: "Rodrigo Cortes Lobos",
-        title: "Advanced Mining Technology Centre Chile",
-        img: ""
-      },
-      {
-        name: "Fleming Voetmann",
-        title: "International Copper Association",
-        img: ""
-      },
-      {
-        name: "Alejadro Gonzalez",
-        title: "GoodElectronics Network / SOMO",
-        img: ""
-      },
-      {
-        name: "Grainne Ui Thuama",
-        title: "Department: Communications, Climate Action, Environment -IE",
-        img: ""
-      },
-      {
-        name: "Renate Schoofs",
-        title: "Department of Environment and Spatial Planning (BE:FLanders)",
-        img: ""
-      },
-      {
-        name: "Diamantoula Lampou",
-        title: "Ministry of Environment and Energy (GR)",
-        img: ""
-      },
-      {
-        name: "Carolin Kranz",
-        title: "BASF",
-        img: ""
-      },
-      {
-        name: "Mark Mistry",
-        title: "Nickel Institute",
-        img: ""
+        name: "Marti Flacks",
+        title: "Deputy Director for North America and Natural Resources",
+        organisation: "Business & Human Rights Resource Centre",
+        img: require("../assets/logos/Business_Human_Rights_resource_cenrte.jpg")
       }
     ],
     advisoryBoard: [
       {
-        name: "Debby de Roover & Daniel Cios",
-        title: "DG GROW, EIP Raw Materials",
-        img: ""
-      },
-      {
-        name: "Lucia Manicini",
-        title: "EC Joint Research Centre",
-        img: ""
-      },
-      {
-        name: "Louis Marechal, Benjamin Katz",
-        title: "OECD - Organisation for EconomicCo-operation and Development",
-        img: ""
-      },
-      {
-        name: "Leon Riedel (Netherlands Enterprise Agency)",
-        title: "European Partnership for Responsible Minerals",
-        img: ""
-      },
-      {
         name: "Antonio Pedro",
+        title: "Director",
+        organisation: "United Nations Economic Commission for Africa",
+        img: ""
+      },
+      {
+        name: "Leon Riedel",
+        title: "Project Adviser",
+        organisation: "European Partnership for Responsible Minerals (EPRM)",
+        img: require("../assets/logos/EPRM-Logo-Text-Small.jpg")
+      },
+      {
+        name: "Debby De Roover",
         title:
-          "UNECA / UN Economic Commission for Africa, Subregional office for East Africa",
+          "Policy Officer Energy intensive industries and raw materials (Green Deal)",
+        organisation: "DG GROW",
         img: ""
       },
       {
-        name: "World Bank",
-        title: "Kristen Hund",
-        img: ""
-      },
-      {
-        name: "Giulia Carbone",
-        title: "IUCN / Internation Union for Conservative of Nature",
-        img: ""
-      },
-      {
-        name: "Aimee Boulanger",
-        title: "IRMA / Initiative for Responsivle Mining Assurance",
-        img: ""
+        name: "Lucia Mancini",
+        title:
+          "Scientific officer Joint Research Centre Directorate D – Sustainable Resources",
+        organisation: "European Commission",
+        img: require("../assets/logos/Eueopean_Commission_Lucia_Mancini.jpg")
       }
     ]
   })

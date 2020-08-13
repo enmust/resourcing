@@ -14,7 +14,7 @@
         </div>
 
         <v-row>
-          <v-col cols="12" md="8" lg="7" class="text-body-1">
+          <v-col cols="12" class="text-h7 text-justify">
             To address responsible sourcing in a holistic manner, such that
             collective synergies of industry, policy and civil society can be
             stimulated, RE-SOURCING will develop three roadmaps for three key EU
@@ -47,12 +47,9 @@
 
                 <v-card-title
                   class="primary--text font-weight-bold justify-center"
+                  style="word-break: break-word"
                   >{{ event.title }}</v-card-title
                 >
-
-                <v-card-text class="text-body-1">
-                  {{ event.text }}
-                </v-card-text>
               </v-card>
             </v-hover>
           </v-col>
@@ -68,19 +65,13 @@ export default {
   data: () => ({
     projectEvents: [
       {
-        title: "KNOWLEDGES for Experts - training materials/learning materials",
-        showInfo: false,
-        text: "Training and learning materials for practitioners."
+        title: "Training and learning materials for practitioners"
       },
       {
-        title: "SECTORS",
-        showInfo: false,
-        text: "Training and learning materials for practitioners."
+        title: "Sectors"
       },
       {
-        title: "ROADMAPS",
-        showInfo: false,
-        text: "Training and learning materials for practitioners."
+        title: "Roadmaps"
       }
     ]
   })

@@ -1,13 +1,19 @@
 <template>
-  <v-card height="100%" flat tile color="transparent" class="events">
+  <v-card
+    height="100%"
+    flat
+    tile
+    color="transparent"
+    class="events text-justify"
+  >
     <v-card flat class="mb-4" color="transparent">
       <v-card-title class="primary--text text-h4 pb-1"
         >Physical events</v-card-title
       >
 
       <v-row>
-        <v-col cols="12" sm="12" md="8" lg="6">
-          <v-card-text class="text-body-1 py-0">
+        <v-col cols="12">
+          <v-card-text class="text-h7 py-0">
             The RE:SOURCING project will host eleven physical events: three
             Flagship Labs (Amsterdam, Leoben, Darmstadt), two Conferences (in
             Brussels and Vienna), three Roadmap Workshops (Brussels), three

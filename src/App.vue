@@ -128,6 +128,13 @@ export default {
   font-family: "CalibriRegular", sans-serif !important;
 }
 
+.text-h7 {
+  font-size: 1.125rem !important;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: 0.03125em !important;
+}
+
 .drop-shadow {
   filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.4));
 }

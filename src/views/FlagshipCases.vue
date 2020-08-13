@@ -14,12 +14,12 @@
         </div>
 
         <v-row>
-          <v-col cols="12" md="8" lg="7" class="text-body-1 font-weight-bold">
+          <v-col cols="12" class="text-h7 text-justify font-weight-bold">
             Learning from innovative business cases for responsible sourcing –
             RE-SOURCING Flagship cases
           </v-col>
 
-          <v-col cols="12" md="8" lg="7" class="text-body-1">
+          <v-col cols="12" class="text-h7 text-justify">
             The challenges faced for broader RS implementation should not take
             away from the fact that a number of EU firms and sectors have taken
             significant steps in this area.
@@ -30,7 +30,7 @@
             wider implementation and transfer of RS best practices.
           </v-col>
 
-          <v-col cols="12" md="8" lg="7" class="text-body-1">
+          <v-col cols="12" class="text-h7 text-justify">
             While peer learning and good practice learning have been
             successfully applied in other sectors and organisations,
             applications of <b>good practice learning and transferability</b> of
@@ -42,7 +42,7 @@
             >.
           </v-col>
 
-          <v-col cols="12" md="8" lg="7" class="text-body-1">
+          <v-col cols="12" class="text-h7 text-justify">
             <b>Knowledge repository on Flagship cases</b>: listing of
             <b>Flagship Cases</b>.
           </v-col>

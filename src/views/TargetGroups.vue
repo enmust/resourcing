@@ -1,5 +1,5 @@
 <template>
-  <div class="target-groups">
+  <div class="target-groups text-justify">
     <v-row no-gutters>
       <v-col
         cols="12"
@@ -22,7 +22,7 @@
                 3 Sectors for achieving a sustainable and carbon-neutral Europe
               </v-card-title>
 
-              <v-card-text class="text-body-1">
+              <v-card-text class="text-h7">
                 The European Green Deal marks Europe’s commitment to become the
                 world’s first climate-neutral continent by 2050.
                 <br />
@@ -41,7 +41,7 @@
                 The RE-SOURCING Sector Roadmap approach
               </v-card-title>
 
-              <v-card-text class="text-body-1">
+              <v-card-text class="text-h7">
                 RE-SOURCING will develop sectoral
                 <b class="primary--text">roadmaps</b> for three key European
                 industrial sectors describing the current situation (“<b
@@ -62,7 +62,7 @@
                 Why 3 sectors
               </v-card-title>
 
-              <v-card-text class="text-body-1">
+              <v-card-text class="text-h7">
                 These three sectors represent essential priorities in the
                 European long-term vision: the
                 <span class="accent2--text font-weight-bold">Mobility</span>
@@ -114,7 +114,8 @@
                     style="background-color: rgba(167, 179, 42, 0.1); border-top: 8px solid #a7b32a"
                   >
                     <v-card-title
-                      class="accent2--text font-weight-bold text-uppercase justify-end pb-2"
+                      class="accent2--text font-weight-bold text-uppercase justify-end pb-2 text-center flex-grow-1"
+                      style="word-break: break-word"
                       >MOBILITY</v-card-title
                     >
                     <v-spacer />
@@ -205,7 +206,8 @@
                     style="background-color: rgba(151, 46, 99, 0.1); border-top: 8px solid #972e63"
                   >
                     <v-card-title
-                      class="accent--text font-weight-bold text-uppercase justify-end pb-2"
+                      class="accent--text font-weight-bold text-uppercase justify-end pb-2 text-center flex-grow-1"
+                      style="word-break: break-word"
                       >RENEWABLE ENERGY</v-card-title
                     >
                     <v-spacer />
@@ -323,7 +325,8 @@
                     style="background-color: rgba(240, 168, 70, 0.1); border-top: 8px solid #f0a846"
                   >
                     <v-card-title
-                      class="accent3--text font-weight-bold text-uppercase justify-end pb-2"
+                      class="accent3--text font-weight-bold text-uppercase justify-end pb-2 flex-grow-1 text-center"
+                      style="word-break: break-word"
                       >ELECTRONICS & ELECTRONIC EQUIPMENT</v-card-title
                     >
                     <v-spacer />
@@ -647,7 +650,7 @@
 export default {
   name: "TargetGroups",
   data: () => ({
-    showMobility: true,
+    showMobility: false,
     showEnergy: false,
     showElectronics: false
   }),

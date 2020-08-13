@@ -1,5 +1,5 @@
 <template>
-  <div class="purpose-and-objectives">
+  <div class="purpose-and-objectives text-justify">
     <v-row no-gutters>
       <v-col
         cols="12"
@@ -16,12 +16,14 @@
         <v-row no-gutters>
           <v-col cols="12" lg="6">
             <v-card flat color="transparent">
-              <v-card-title class="primary--text"
+              <v-card-title
+                class="primary--text font-weight-bold"
+                style="word-break: break-word;"
                 >Major RE-SOURCING outcomes are tailored to achieve the
                 following impacts:</v-card-title
               >
 
-              <div class="text-body-1 px-4 pb-4">
+              <div class="text-h7 px-4 pb-4">
                 <ul>
                   <li>
                     Built a vibrant and active community, consisting of
@@ -52,9 +54,11 @@
 
           <v-col cols="12" lg="6">
             <v-card flat color="transparent">
-              <v-card-title class="primary--text">PROJECT END:</v-card-title>
+              <v-card-title class="primary--text font-weight-bold"
+                >PROJECT END:</v-card-title
+              >
 
-              <div class="text-body-1 px-4 pb-4">
+              <div class="text-h7 px-4 pb-4">
                 <ul>
                   <li>
                     The RE-SOURCING Platform is a well-known and widely used hub

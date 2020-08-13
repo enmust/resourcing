@@ -10,11 +10,13 @@
           'px-12': $vuetify.breakpoint.mdAndUp
         }"
       >
-        <div class="primary--text text-h5 font-weight-bold mt-2 mb-5">
+        <div
+          class="primary--text text-h5 font-weight-bold mt-2 mb-5 text-justify"
+        >
           RE-SOURCING - Make your case for Responsible Sourcing!
         </div>
 
-        <div class="text-body-1 mb-3">
+        <div class="text-h7 mb-3 text-justify">
           Responsible Sourcing is becoming a reality for more and more
           businesses, NGOs, and policymakers. Everyone is striving to keep ahead
           of rapidly evolving ecological and social needs, company practices,
@@ -22,14 +24,14 @@
           by civil society, etc.
         </div>
 
-        <div class="text-body-1 mb-3">
+        <div class="text-h7 mb-3 text-justify">
           In response to the growing challenge of responsible sourcing, the
           Vienna University of Economics and Business, together with 11
           international partners, started the RE-SOURCING Global Stakeholder
           Platform in 2020.
         </div>
 
-        <div class="text-body-1">
+        <div class="text-h7 text-justify">
           Over the period of four years, the RE-SOURCING Platform will help
           decision-makers in industry, public policy and civil society to:
         </div>
@@ -42,7 +44,7 @@
               elevation="4"
             >
               <v-card-title
-                class="font-weight-bold text-h6"
+                class="font-weight-bold text-h6 text-center"
                 style="word-break: break-word;"
               >
                 Learn together from innovative business cases for Responsible
@@ -61,7 +63,7 @@
               elevation="4"
             >
               <v-card-title
-                class="font-weight-bold text-h6"
+                class="font-weight-bold text-h6 text-center"
                 style="word-break: break-word;"
               >
                 Create Responsible Sourcing Industry Roadmaps for renewable
@@ -80,7 +82,7 @@
               elevation="4"
             >
               <v-card-title
-                class="font-weight-bold text-h6"
+                class="font-weight-bold text-h6 text-center"
                 style="word-break: break-word;"
               >
                 Advance the harmonization of concepts and establish a Global
@@ -99,7 +101,7 @@
               elevation="4"
             >
               <v-card-title
-                class="font-weight-bold text-h6"
+                class="font-weight-bold text-h6 text-center"
                 style="word-break: break-word;"
               >
                 Build a global Responsible Sourcing Community by connecting
@@ -222,7 +224,7 @@
           A team with diverse backgrounds to match the challenge
         </div>
 
-        <div class="text-body-1 mb-3">
+        <div class="text-h7 mb-3 text-justify">
           Our team composition facilitates the setup of the RE-SOURCING Global
           Stakeholder Platform as a neutral and mediating space that is open to
           the many perspectives of involved stakeholders. Our skills,
@@ -327,7 +329,7 @@
           class="fill-height"
           style="min-height: 360px"
           width="100%"
-          src="https://www.youtube.com/embed/48Q2OxH_64w?start=5"
+          src="https://www.youtube.com/embed/T5qOGGS03mE"
         ></iframe>
       </v-col>
 
@@ -402,6 +404,19 @@ export default {
     usersEmailAddress: "",
     members: [
       {
+        name: "Andreas Endl",
+        institute: "Vienna University of Economics and Business",
+        job: "Project coordination & research",
+        img: require("../assets/img/members/andreas_endl.jpg")
+      },
+      {
+        name: "Gerald Berger",
+        institute:
+          "Institute for Managing Sustainability, Vienna University of Economics and Business",
+        job: "Project coordination & event and peer learning design",
+        img: require("../assets/img/members/gerald_berger.jpg")
+      },
+      {
         name: "Bas de Leeuw",
         institute: "World Resources Forum",
         job: "Managing Director, Communication and Stakeholder Engagement",
@@ -418,19 +433,6 @@ export default {
         institute: "World Resources Forum",
         job: "Project Manager, Communication and Stakeholder Engagement",
         img: require("../assets/img/members/shahrzad_manoocheri.jpg")
-      },
-      {
-        name: "Gerald Berger",
-        institute:
-          "Institute for Managing Sustainability, Vienna University of Economics and Business",
-        job: "Project coordination & event and peer learning design",
-        img: require("../assets/img/members/gerald_berger.jpg")
-      },
-      {
-        name: "Andreas Endl",
-        institute: "Vienna University of Economics and Business",
-        job: "Project coordination & research",
-        img: require("../assets/img/members/andreas_endl.jpg")
       },
       {
         name: "Tobias Kind",
@@ -491,6 +493,24 @@ export default {
         img: require("../assets/img/members/marie-theres_kugerl.jpg")
       },
       {
+        name: "Masuma Farooki",
+        institute: "MineHutte",
+        job: "Consulting Director",
+        img: require("../assets/img/members/masuma_farooki.jpg")
+      },
+      {
+        name: "Veiko Karu",
+        institute: "Tallinn University of Technology, Department of Geology",
+        job: "Division of Mining, Senior Project Manager",
+        img: require("../assets/img/members/veiko_karu.jpg")
+      },
+      {
+        name: "Karin Robam",
+        institute: "Tallinn University of Technology, Department of Geology",
+        job: "Division of Mining, Specialist",
+        img: require("../assets/img/members/karin_robam.jpg")
+      },
+      {
         name: "Noé Barriere",
         institute: "Vienna University of Economics of Business",
         job: "Peer learning on innovative business cases",
@@ -502,12 +522,6 @@ export default {
           "Institute for Managing Sustainability, Vienna University of Economics and Business",
         job: "Project Coordination & Research",
         img: require("../assets/img/members/alexander_graf.jpg")
-      },
-      {
-        name: "Masuma Farooki",
-        institute: "MineHutte",
-        job: "Consulting Director",
-        img: require("../assets/img/members/masuma_farooki.jpg")
       }
     ]
   }),
@@ -545,7 +559,8 @@ export default {
 }
 
 .peter_dolega .v-image__image,
-.stefanie_degreif .v-image__image {
+.stefanie_degreif .v-image__image,
+.karin_robam .v-image__image {
   background-position: top !important;
 }
 

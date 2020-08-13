@@ -1,5 +1,5 @@
 <template>
-  <div class="news white--text">
+  <div class="news white--text text-justify">
     <v-row no-gutters>
       <v-col
         cols="12"
@@ -23,12 +23,18 @@
           </v-col>
 
           <v-col cols="12" sm="12" md="6" lg="5">
-            <p class="text-h5">
-              EU project RE-SOURCING: Successful project Kick-off meeting at the
-              WU Vienna
+            <p class="text-h5 news-link font-weight-bold">
+              <a
+                class="white--text"
+                href="https://www.wu.ac.at/en/sustainability/news-details/detail/eu-project-re-sourcing-successful-project-kick-off-meeting-at-the-wu-vienna"
+                target="NewsWindow"
+              >
+                EU project RE-SOURCING: Successful project Kick-off meeting at
+                the WU Vienna
+              </a>
             </p>
 
-            <p class="text-body-1">
+            <p class="text-h7">
               ON 16-18 December 2019, the RE-SOURCING consortium met for the
               first time in person at the Vienna University of Economics and
               Business. 27 people from 12 partners and from 9 countries
@@ -46,7 +52,7 @@
         </v-row>
 
         <v-row class="mt-4">
-          <v-col cols="12" sm="12" md="8" lg="6" class="text-body-1">
+          <v-col cols="12" class="text-h5 font-weight-bold">
             RE-SOURCING will work together with media professionals for one
             large new campaign hitting media outlets toward the end of the
             project.
@@ -85,13 +91,13 @@
 
           <v-col cols="12">
             <v-row>
-              <v-col cols="12" sm="12" md="8" lg="6">
-                <div class="text-body-1">
+              <v-col cols="12">
+                <div class="text-h5">
                   <b class="font-weight-bold">RE-SOURCING in social media</b>:
-                  (E-newsletters, Twitter, LinkedIN, Facebook. RE-SOURCING will
-                  use social media outlets to ensure wider outreach and
-                  dissemination of project activities and results under these
-                  selected hashtags (#RESOURCING; #Horizon2020project; etc.).
+                  <!--                  (E-newsletters, Twitter, LinkedIN, Facebook. RE-SOURCING will-->
+                  <!--                  use social media outlets to ensure wider outreach and-->
+                  <!--                  dissemination of project activities and results under these-->
+                  <!--                  selected hashtags (#RESOURCING; #Horizon2020project; etc.).-->
                 </div>
               </v-col>
             </v-row>
@@ -158,4 +164,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.news-link:hover {
+  opacity: 0.7;
+}
+</style>

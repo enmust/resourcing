@@ -14,7 +14,7 @@
         </div>
 
         <v-row>
-          <v-col cols="12" md="8" lg="7" class="text-body-1">
+          <v-col cols="12" class="text-h7 text-justify">
             Better understanding of the state-of-play in three raw material
             based sectors: Renewable energy, mobility and electronics and
             electric equipment. State-of-plays in every three sector describes
