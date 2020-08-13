@@ -351,6 +351,12 @@ export default {
           "Scientific officer Joint Research Centre Directorate D – Sustainable Resources",
         organisation: "European Commission",
         img: require("../assets/logos/Eueopean_Commission_Lucia_Mancini.jpg")
+      },
+      {
+        name: "Aimee Boulanger",
+        title: "Initiative for Responsible Mining Assurance",
+        organisation: "IRMA",
+        img: require("../assets/logos/IRMA_Lock up_Portrait_Blk_RGB.png")
       }
     ]
   })

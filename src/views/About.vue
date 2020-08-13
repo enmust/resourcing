@@ -1,5 +1,5 @@
 <template>
-  <div class="about transparent" v-if="$route.name === 'About'">
+  <div class="about transparent text-justify" v-if="$route.name === 'About'">
     <v-row no-gutters>
       <v-col
         cols="12"
@@ -15,11 +15,11 @@
         </div>
 
         <v-card flat color="transparent">
-          <v-card-title class="primary--text"
+          <v-card-title class="primary--text font-weight-bold"
             >... for EU and international business stakeholders:</v-card-title
           >
 
-          <div class="text-body-1 px-4 pb-4">
+          <div class="text-h7 px-4 pb-4">
             <ul>
               <li>
                 Increased capacity for implementing responsible business conduct
@@ -39,11 +39,11 @@
         </v-card>
 
         <v-card flat color="transparent">
-          <v-card-title class="primary--text"
+          <v-card-title class="primary--text font-weight-bold"
             >... for EU policymakers:</v-card-title
           >
 
-          <div class="text-body-1 px-4 pb-4">
+          <div class="text-h7 px-4 pb-4">
             <ul>
               <li>
                 Increased capacity for RS policy design and implementation
@@ -62,11 +62,11 @@
         </v-card>
 
         <v-card flat color="transparent">
-          <v-card-title class="primary--text"
+          <v-card-title class="primary--text font-weight-bold"
             >... for Civil Society:</v-card-title
           >
 
-          <div class="text-body-1 px-4 pb-4">
+          <div class="text-h7 px-4 pb-4">
             <ul>
               <li>
                 Integration of sustainable development and environmental
