@@ -158,7 +158,12 @@
                 <div
                   class="align-self-center"
                   v-if="entity.img"
-                  :class="{ 'py-2 pl-2': $vuetify.breakpoint.xsOnly }"
+                  :class="{
+                    'py-2 pl-2': $vuetify.breakpoint.xsOnly,
+                    'pl-1':
+                      entity.name === 'Antonio Pedro' ||
+                      entity.name === 'Debby De Roover'
+                  }"
                 >
                   <v-img
                     v-if="entity.img"
@@ -330,20 +335,13 @@ export default {
         name: "Antonio Pedro",
         title: "Director",
         organisation: "United Nations Economic Commission for Africa",
-        img: ""
+        img: require("../assets/logos/united_nations.jpg")
       },
       {
         name: "Leon Riedel",
         title: "Project Adviser",
         organisation: "European Partnership for Responsible Minerals (EPRM)",
         img: require("../assets/logos/EPRM-Logo-Text-Small.jpg")
-      },
-      {
-        name: "Debby De Roover",
-        title:
-          "Policy Officer Energy intensive industries and raw materials (Green Deal)",
-        organisation: "DG GROW",
-        img: ""
       },
       {
         name: "Lucia Mancini",
@@ -357,6 +355,14 @@ export default {
         title: "Initiative for Responsible Mining Assurance",
         organisation: "IRMA",
         img: require("../assets/logos/IRMA_Lock up_Portrait_Blk_RGB.png")
+      },
+      {
+        name: "Debby De Roover",
+        title:
+          "Policy Officer Energy intensive industries and raw materials (Green Deal)",
+        organisation:
+          "European Commission Internal Market, Industry, Entrepreneurship and SMEs",
+        img: require("../assets/logos/DG_Grow.jpg")
       }
     ]
   })

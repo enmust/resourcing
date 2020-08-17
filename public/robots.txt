@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://re-sourcing.eu/sitemap.xml

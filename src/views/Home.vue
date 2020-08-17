@@ -151,28 +151,29 @@
                   small
                   @click="$vuetify.goTo('.subscribe')"
                   color="accent3"
+                  aria-label="Go to subscribe form"
                 >
                   Subscribe
                 </v-btn>
                 <v-spacer />
 
-                <v-btn icon>
+                <v-btn icon aria-label="linked-in">
                   <v-icon style="color: #2867B2">fab fa-linkedin</v-icon>
                 </v-btn>
 
-                <v-btn icon>
+                <v-btn icon aria-label="twitter">
                   <v-icon style="color: #1DA1F2">fab fa-twitter</v-icon>
                 </v-btn>
 
-                <v-btn icon>
+                <v-btn icon aria-label="facebook">
                   <v-icon style="color: #4267B2">fab fa-facebook</v-icon>
                 </v-btn>
 
-                <v-btn icon>
+                <v-btn icon aria-label="youtube">
                   <v-icon style="color: #FF0000">fab fa-youtube</v-icon>
                 </v-btn>
 
-                <v-btn icon>
+                <v-btn icon aria-label="instagram">
                   <v-icon>fab fa-instagram</v-icon>
                 </v-btn>
               </v-card-actions>
@@ -295,6 +296,7 @@
             class="mr-2"
             placeholder="Enter your email address"
             type="email"
+            aria-label="Enter your email address"
           ></v-text-field>
 
           <v-btn
@@ -326,6 +328,7 @@
     <v-row no-gutters>
       <v-col cols="12" md="6">
         <iframe
+          title="RE-SOURCING video introduction"
           class="fill-height"
           style="min-height: 360px"
           width="100%"

@@ -47,7 +47,11 @@
                 >
                 <v-spacer />
 
-                <v-btn icon @click="event.showInfo = !event.showInfo">
+                <v-btn
+                  icon
+                  @click="event.showInfo = !event.showInfo"
+                  :aria-label="`toggle ${event.title} info`"
+                >
                   <v-icon v-if="event.showInfo">fas fa-angle-up</v-icon>
                   <v-icon v-else>fas fa-angle-down</v-icon>
                 </v-btn>
@@ -91,7 +95,11 @@
                 >
                 <v-spacer />
 
-                <v-btn icon @click="event.showInfo = !event.showInfo">
+                <v-btn
+                  icon
+                  @click="event.showInfo = !event.showInfo"
+                  :aria-label="`toggle ${event.title} info`"
+                >
                   <v-icon v-if="event.showInfo">fas fa-angle-up</v-icon>
                   <v-icon v-else>fas fa-angle-down</v-icon>
                 </v-btn>

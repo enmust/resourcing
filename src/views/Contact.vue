@@ -21,6 +21,8 @@
           href="mailto:info@re-sourcing.eu"
           color="accent3"
           dark
+          aria-label="mail us"
+          title="Mail us"
           ><v-icon>far fa-envelope</v-icon></v-btn
         >
         <v-card-text class="align-self-center">
@@ -36,6 +38,8 @@
           href="tel:+431313365452"
           color="accent3"
           dark
+          aria-label="call us"
+          title="Call us"
           ><v-icon>fas fa-mobile-alt</v-icon></v-btn
         >
         <v-card-text>

@@ -120,7 +120,11 @@
                     >
                     <v-spacer />
 
-                    <v-btn icon @click.stop="showMobility = !showMobility">
+                    <v-btn
+                      icon
+                      @click.stop="showMobility = !showMobility"
+                      aria-label="toggle mobility text"
+                    >
                       <v-icon v-if="showMobility">fas fa-angle-up</v-icon>
                       <v-icon v-else>fas fa-angle-down</v-icon>
                     </v-btn>
@@ -212,7 +216,11 @@
                     >
                     <v-spacer />
 
-                    <v-btn icon @click.stop="showEnergy = !showEnergy">
+                    <v-btn
+                      icon
+                      @click.stop="showEnergy = !showEnergy"
+                      aria-label="toggle energy text"
+                    >
                       <v-icon v-if="showEnergy">fas fa-angle-up</v-icon>
                       <v-icon v-else>fas fa-angle-down</v-icon>
                     </v-btn>
@@ -334,6 +342,7 @@
                     <v-btn
                       icon
                       @click.stop="showElectronics = !showElectronics"
+                      aria-label="toggle electronics text"
                     >
                       <v-icon v-if="showElectronics">fas fa-angle-up</v-icon>
                       <v-icon v-else>fas fa-angle-down</v-icon>
