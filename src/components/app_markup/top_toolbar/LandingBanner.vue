@@ -13,7 +13,7 @@
     <div class="custom-flex-grow-1"></div>
 
     <div class="project-video">
-      <video autoplay loop muted>
+      <video autoplay muted>
         <source
           :src="require('../../../assets/animation/animation_960x320.mp4')"
           type="video/mp4"

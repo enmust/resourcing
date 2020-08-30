@@ -40,6 +40,10 @@
             collection and sharing of information, implementing responsible
             sourcing can be a struggle for the well-intentioned firm.
           </v-col>
+
+          <v-col cols="12" class="text-h7 text-justify">
+            More information will be added as the RE-SOURCING project progresses.
+          </v-col>
         </v-row>
       </v-col>
     </v-row>

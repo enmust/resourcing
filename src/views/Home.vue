@@ -36,6 +36,25 @@
           decision-makers in industry, public policy and civil society to:
         </div>
 
+        <div
+          class="mt-2"
+          :class="{
+            'video-container': $vuetify.breakpoint.mdAndDown,
+            'text-center': $vuetify.breakpoint.lgAndUp
+          }"
+        >
+          <iframe
+            title="RE-SOURCING video introduction"
+            :class="{
+              video: $vuetify.breakpoint.mdAndDown,
+              'video-large-screen': $vuetify.breakpoint.lgAndUp
+            }"
+            src="https://www.youtube.com/embed/T5qOGGS03mE"
+            allowfullscreen
+            frameborder="0"
+          ></iframe>
+        </div>
+
         <v-row>
           <v-col cols="12" sm="6">
             <v-card
@@ -183,7 +202,7 @@
           <v-col cols="12" class="px-5 py-3">
             <v-card>
               <v-card-title class="text-h5 primary--text"
-                >Upcoming news</v-card-title
+                >Upcoming events</v-card-title
               >
 
               <v-card-text>
@@ -326,17 +345,7 @@
     ></v-sheet>
 
     <v-row no-gutters>
-      <v-col cols="12" md="6">
-        <iframe
-          title="RE-SOURCING video introduction"
-          class="fill-height"
-          style="min-height: 360px"
-          width="100%"
-          src="https://www.youtube.com/embed/T5qOGGS03mE"
-        ></iframe>
-      </v-col>
-
-      <v-col cols="12" md="6" class="px-3 pt-3 pb-5">
+      <v-col cols="12" offset-lg="3" lg="6" class="px-3 pt-3 pb-5">
         <div class="text-h6 font-weight-bold primary--text mt-3">
           The latest news...
         </div>
@@ -514,6 +523,18 @@ export default {
         img: require("../assets/img/members/karin_robam.jpg")
       },
       {
+        name: "Alejandro González",
+        institute: "Centre for Research on Multinational Corporations",
+        job: "Researcher SOMO / Coordinator GoodElectronics Network",
+        img: require("../assets/img/members/alejandro_gonzalez.jpg")
+      },
+      {
+        name: "Jan Rosenkranz",
+        institute: "Luleå University of Technology",
+        job: "Professor in Mineral Processing",
+        img: require("../assets/img/members/jan_rosenkranz.jpg")
+      },
+      {
         name: "Noé Barriere",
         institute: "Vienna University of Economics of Business",
         job: "Peer learning on innovative business cases",
@@ -597,5 +618,25 @@ export default {
   );
   background-clip: text;
   -webkit-background-clip: text;
+}
+
+.video-container {
+  height: 0;
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-large-screen {
+  width: 640px;
+  height: 480px;
 }
 </style>

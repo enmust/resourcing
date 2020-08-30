@@ -28,9 +28,15 @@
             <p class="mb-0 font-weight-bold">Quick links</p>
             <ul>
               <li v-for="link in quickLinks" :key="link.name">
-                <router-link class="white--text link" :to="link.url">{{
+                <router-link
+                  v-if="!link.isLink"
+                  class="white--text link"
+                  :to="link.url"
+                  >{{ link.name }}</router-link
+                >
+                <a v-else class="white--text link" :href="link.url" target="PrivacyWindow" rel="noopener noreferrer">{{
                   link.name
-                }}</router-link>
+                }}</a>
               </li>
             </ul>
           </div>
@@ -96,12 +102,10 @@ export default {
         url: "/news"
       },
       {
-        name: "Legal Notice",
-        url: "/legal_notice"
-      },
-      {
-        name: "Privacy Policy",
-        url: "/privacy_policy"
+        name: "Legal Notice & Privacy Policy",
+        url:
+          "https://re-sourcing.eu/RE-SOURCING%20website%20%E2%80%93%20Privacy%20Policy%20and%20Legal%20Notice%20v%201.0%20(2020-03-02).pdf",
+        isLink: true
       }
     ]
   })

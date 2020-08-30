@@ -20,6 +20,10 @@
             electric equipment. State-of-plays in every three sector describes
             existing responsible sourcing initiatives in the EU and globally.
           </v-col>
+
+          <v-col cols="12" class="text-h7 text-justify">
+            More information will be added as the RE-SOURCING project progresses.
+          </v-col>
         </v-row>
       </v-col>
     </v-row>

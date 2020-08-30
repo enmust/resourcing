@@ -63,6 +63,16 @@ export default {
         url: "/about/partners"
       },
       {
+        icon: "fas fa-user-friends",
+        text: "Platform Steering Commitee",
+        url: "/about/platform_steering_commitee"
+      },
+      {
+        icon: "fas fa-chalkboard-teacher",
+        text: "Advisory Board",
+        url: "/about/advisory_board"
+      },
+      {
         icon: "fas fa-users",
         text: "Target groups",
         url: "/target_groups"
@@ -77,11 +87,11 @@ export default {
         text: "Events",
         url: "/events"
       },
-      {
-        icon: "fas fa-info-circle",
-        text: "Knowledge hub",
-        url: "/knowledge_hub"
-      },
+      // {
+      //   icon: "fas fa-info-circle",
+      //   text: "Knowledge hub",
+      //   url: "/knowledge_hub"
+      // },
       {
         icon: "fab fa-wikipedia-w",
         text: "Wiki on RS",

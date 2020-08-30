@@ -53,6 +53,12 @@
           <v-list-item to="/about/partners" exact>
             <v-list-item-title>PARTNERS</v-list-item-title>
           </v-list-item>
+          <v-list-item to="/about/platform_steering_commitee" exact>
+            <v-list-item-title>PLATFORM STEERING COMMITEE</v-list-item-title>
+          </v-list-item>
+          <v-list-item to="/about/advisory_board" exact>
+            <v-list-item-title>ADVISORY BOARD</v-list-item-title>
+          </v-list-item>
         </v-list>
       </v-menu>
 
@@ -75,9 +81,9 @@
         </template>
 
         <v-list color="primary2" dark>
-          <v-list-item to="/knowledge_hub" exact>
-            <v-list-item-title>KNOWLEDGE HUB</v-list-item-title>
-          </v-list-item>
+<!--          <v-list-item to="/knowledge_hub" exact>-->
+<!--            <v-list-item-title>KNOWLEDGE HUB</v-list-item-title>-->
+<!--          </v-list-item>-->
           <v-list-item to="/knowledge_hub/wiki_on_rs" exact>
             <v-list-item-title>WIKI ON RS</v-list-item-title>
           </v-list-item>

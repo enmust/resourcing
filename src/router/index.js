@@ -28,6 +28,16 @@ const routes = [
         path: "partners",
         name: "Partners",
         component: () => import("../views/Partners.vue")
+      },
+      {
+        path: "platform_steering_commitee",
+        name: "Platform steering commitee",
+        component: () => import("../views/PlatformSteeringCommitee.vue")
+      },
+      {
+        path: "advisory_board",
+        name: "Advisory board",
+        component: () => import("../views/AdvisoryBoard.vue")
       }
     ]
   },
@@ -77,21 +87,11 @@ const routes = [
     path: "/contact",
     name: "Contact",
     component: () => import("../views/Contact.vue")
-  },
-  {
-    path: "/legal_notice",
-    name: "Legal notice",
-    component: () => import("../views/LegalNotice.vue")
-  },
-  {
-    path: "/privacy_policy",
-    name: "Privacy policy",
-    component: () => import("../views/PrivacyPolicy.vue")
   }
 ];
 
 const router = new VueRouter({
-  mode: "history",
+  // mode: "history",
   routes
 });
 

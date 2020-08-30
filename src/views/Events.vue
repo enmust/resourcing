@@ -114,7 +114,7 @@
       </v-row>
     </v-card>
 
-    <v-card color="primary3" elevation="4" class="mb-2 mt-4" height="600">
+    <v-card color="primary3" elevation="4" class="mb-2 mt-4" height="600" v-if="false">
       <v-card-title class="white--text text-h4 pb-1"
         >Events at a glance</v-card-title
       >

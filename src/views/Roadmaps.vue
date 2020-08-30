@@ -54,6 +54,12 @@
             </v-hover>
           </v-col>
         </v-row>
+
+        <v-row>
+          <v-col cols="12" class="text-h7 text-justify">
+            More information will be added as the RE-SOURCING project progresses.
+          </v-col>
+        </v-row>
       </v-col>
     </v-row>
   </div></template

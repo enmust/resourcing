@@ -44,7 +44,9 @@ export default {
         name === "Home" ||
         name === "About" ||
         name === "Purpose and objectives" ||
-        name === "Partners"
+        name === "Partners" ||
+        name === "Platform steering commitee" ||
+        name === "Advisory board"
       )
         return "primary5";
       else if (name === "Target groups") return "primary4";
@@ -53,8 +55,7 @@ export default {
 
     showBottomSheet() {
       let name = this.$route.name;
-      if (name === "Events") return true;
-      else return false;
+      return name === "Events";
     },
 
     addPaddingToRouteView() {
@@ -64,6 +65,8 @@ export default {
         name !== "About" &&
         name !== "Purpose and objectives" &&
         name !== "Partners" &&
+        name !== "Platform steering commitee" &&
+        name !== "Advisory board" &&
         name !== "Knowledge hub" &&
         name !== "Wiki on rs" &&
         name !== "Flagship cases" &&

@@ -1,5 +1,5 @@
 <template>
-  <div class="flagship_cases white--text">
+  <div class="flagship-cases white--text">
     <v-row no-gutters>
       <v-col
         cols="12"
@@ -45,6 +45,10 @@
           <v-col cols="12" class="text-h7 text-justify">
             <b>Knowledge repository on Flagship cases</b>: listing of
             <b>Flagship Cases</b>.
+          </v-col>
+
+          <v-col cols="12" class="text-h7 text-justify">
+            More information will be added as the RE-SOURCING project progresses.
           </v-col>
         </v-row>
       </v-col>
