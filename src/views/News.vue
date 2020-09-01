@@ -51,7 +51,8 @@
           </v-col>
         </v-row>
 
-        <v-row class="mt-4">
+        <!-- TODO: Hidden for now (missing information) -->
+        <v-row class="mt-4" v-if="false">
           <v-col cols="12" class="text-h5 font-weight-bold">
             RE-SOURCING will work together with media professionals for one
             large new campaign hitting media outlets toward the end of the

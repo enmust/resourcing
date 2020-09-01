@@ -31,7 +31,7 @@
           :key="index"
         >
           <v-hover v-slot:default="{ hover }">
-            <v-card class="pa-2 mx-3 my-3" :elevation="hover ? 12 : 4" hover>
+            <v-card class="pa-2 mx-3 my-3" :elevation="hover ? 12 : 4">
               <v-img
                 :src="
                   require('../assets/logos/project_logo/re-sourcing_500px.jpg')
@@ -42,15 +42,16 @@
 
               <v-card-actions class="pa-0">
                 <v-card-title
-                  class="primary--text font-weight-bold text-uppercase justify-end pb-1"
+                  @click="event.showInfo = !event.showInfo"
+                  class="primary--text font-weight-bold text-uppercase justify-end pb-1 link"
                   >{{ event.title }}</v-card-title
                 >
                 <v-spacer />
 
                 <v-btn
                   icon
-                  @click="event.showInfo = !event.showInfo"
                   :aria-label="`toggle ${event.title} info`"
+                  @click="event.showInfo = !event.showInfo"
                 >
                   <v-icon v-if="event.showInfo">fas fa-angle-up</v-icon>
                   <v-icon v-else>fas fa-angle-down</v-icon>
@@ -58,7 +59,11 @@
               </v-card-actions>
 
               <v-card-text class="text-body-1" v-if="event.showInfo">
-                {{ event.text }}
+                <div
+                  v-if="event.title === 'Roadmap Workshops'"
+                  v-html="event.text"
+                />
+                <div v-else>{{ event.text }}</div>
               </v-card-text>
             </v-card>
           </v-hover>
@@ -79,7 +84,7 @@
           :key="index"
         >
           <v-hover v-slot:default="{ hover }">
-            <v-card class="pa-2 mx-3 my-3" :elevation="hover ? 12 : 4" hover>
+            <v-card class="pa-2 mx-3 my-3" :elevation="hover ? 12 : 4">
               <v-img
                 :src="
                   require('../assets/logos/project_logo/re-sourcing_500px.jpg')
@@ -90,15 +95,16 @@
 
               <v-card-actions class="pa-0">
                 <v-card-title
-                  class="primary--text font-weight-bold text-uppercase justify-end pb-1"
+                  @click="event.showInfo = !event.showInfo"
+                  class="primary--text font-weight-bold text-uppercase justify-end pb-1 link"
                   >{{ event.title }}</v-card-title
                 >
                 <v-spacer />
 
                 <v-btn
                   icon
-                  @click="event.showInfo = !event.showInfo"
                   :aria-label="`toggle ${event.title} info`"
+                  @click="event.showInfo = !event.showInfo"
                 >
                   <v-icon v-if="event.showInfo">fas fa-angle-up</v-icon>
                   <v-icon v-else>fas fa-angle-down</v-icon>
@@ -114,7 +120,13 @@
       </v-row>
     </v-card>
 
-    <v-card color="primary3" elevation="4" class="mb-2 mt-4" height="600" v-if="false">
+    <v-card
+      color="primary3"
+      elevation="4"
+      class="mb-2 mt-4"
+      height="600"
+      v-if="false"
+    >
       <v-card-title class="white--text text-h4 pb-1"
         >Events at a glance</v-card-title
       >
@@ -130,7 +142,7 @@
           :key="index"
         >
           <v-hover v-slot:default="{ hover }">
-            <v-card class="pa-2 mx-3 my-3" :elevation="hover ? 12 : 4" hover>
+            <v-card class="pa-2 mx-3 my-3" :elevation="hover ? 12 : 4">
               <v-img
                 :src="
                   require('../assets/logos/project_logo/re-sourcing_500px.jpg')
@@ -164,8 +176,19 @@ export default {
       {
         title: "Roadmap Workshops",
         showInfo: false,
-        text:
-          "The 3 Sector Roadmap Workshops will bring together about 100 key decision-makers in industry, policy, business and civil society. The roadmap workshops will generate content in the key areas of the roadmap. One of the main goals is to create ownership of the process for targeted sector stakeholders and initiatives and ensure applicability of Sectoral Roadmaps for future implementation."
+        text: `
+          <div class="mb-2" style="font-size: 18px;">Virtual Roadmap Workshop</div>
+          <div class="mb-2">Responsible sourcing in the renewable energy supply chain – a reality or still a long way to go?</div>
+          <div class="mb-2">The RE-SOURCING project is aiming to develop a roadmap for the renewable energy sector to achieve a sustainable and responsible value chain. To do that we need YOUR support!</div>
+          <div class="mb-2">Join us in the Virtual Roadmap Workshop</div>
+          <div class="mb-2 ml-6">on <b>29 October 2020, 1:30-5:00 pm</b></div>
+          <div class="mb-2"> and support us with your expertise in the renewable energy sector.</div>
+          <div class="mb-2"> Our focus will be on</div>
+          <ul>
+            <li>mining & processing of copper, rare earth elements, and silicon</li>
+            <li>manufacturing and recycling of wind turbines and solar panels</li>
+            <li>standards for sustainability and responsible sourcing</li>
+          </ul>`
       },
       {
         title: "Flagship Labs",

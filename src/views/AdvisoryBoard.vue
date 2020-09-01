@@ -36,7 +36,8 @@
                     'py-2 pl-2': $vuetify.breakpoint.xsOnly,
                     'pl-1':
                       entity.name === 'Antonio Pedro' ||
-                      entity.name === 'Debby De Roover'
+                      entity.name === 'Debby De Roover' ||
+                      entity.name === 'Lucia Mancini'
                   }"
                 >
                   <v-img
@@ -98,7 +99,7 @@ export default {
         title:
           "Scientific officer Joint Research Centre Directorate D – Sustainable Resources",
         organisation: "European Commission",
-        img: require("../assets/logos/Eueopean_Commission_Lucia_Mancini.jpg")
+        img: require("../assets/logos/DG_Grow.jpg")
       },
       {
         name: "Aimee Boulanger",

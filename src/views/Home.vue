@@ -141,7 +141,9 @@
         <v-row no-gutters class="my-3">
           <v-col cols="12" class="px-5 py-3">
             <v-card>
-              <v-card-title class="text-h5 primary--text"
+              <v-card-title
+                @click="$router.push('news')"
+                class="text-h5 primary--text text-decoration-underline link"
                 >Latest news</v-card-title
               >
 
@@ -155,7 +157,7 @@
                   ></v-img>
                 </div>
 
-                <div class="mt-2 text-h6">
+                <div class="mt-2 text-h6 link">
                   <a
                     href="https://www.wu.ac.at/en/sustainability/news-details/detail/eu-project-re-sourcing-successful-project-kick-off-meeting-at-the-wu-vienna"
                     target="NewsWindow"
@@ -176,7 +178,14 @@
                 </v-btn>
                 <v-spacer />
 
-                <v-btn icon aria-label="linked-in">
+                <v-btn
+                  icon
+                  aria-label="linked-in"
+                  href="https://www.linkedin.com/company/re-sourcing-stakeholder-platform/"
+                  target="LinkedInWindow"
+                  rel="noopener noreferrer"
+                  title="LinkedIn"
+                >
                   <v-icon style="color: #2867B2">fab fa-linkedin</v-icon>
                 </v-btn>
 
@@ -188,7 +197,14 @@
                   <v-icon style="color: #4267B2">fab fa-facebook</v-icon>
                 </v-btn>
 
-                <v-btn icon aria-label="youtube">
+                <v-btn
+                  icon
+                  aria-label="youtube"
+                  href="https://www.youtube.com/watch?v=T5qOGGS03mE"
+                  target="YoutubeWindow"
+                  rel="noopener noreferrer"
+                  title="RE SOURCING Projekt Trailer"
+                >
                   <v-icon style="color: #FF0000">fab fa-youtube</v-icon>
                 </v-btn>
 
@@ -201,7 +217,9 @@
 
           <v-col cols="12" class="px-5 py-3">
             <v-card>
-              <v-card-title class="text-h5 primary--text"
+              <v-card-title
+                @click="$router.push('events')"
+                class="text-h5 primary--text text-decoration-underline link"
                 >Upcoming events</v-card-title
               >
 
@@ -344,7 +362,8 @@
       class="drop-shadow"
     ></v-sheet>
 
-    <v-row no-gutters>
+    <!-- TODO: Hidden for now (missing information) -->
+    <v-row no-gutters v-if="false">
       <v-col cols="12" offset-lg="3" lg="6" class="px-3 pt-3 pb-5">
         <div class="text-h6 font-weight-bold primary--text mt-3">
           The latest news...
@@ -638,5 +657,10 @@ export default {
 .video-large-screen {
   width: 640px;
   height: 480px;
+}
+
+.link:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 </style>
