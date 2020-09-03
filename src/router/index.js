@@ -30,9 +30,9 @@ const routes = [
         component: () => import("../views/Partners.vue")
       },
       {
-        path: "platform_steering_commitee",
-        name: "Platform steering commitee",
-        component: () => import("../views/PlatformSteeringCommitee.vue")
+        path: "platform_steering_committee",
+        name: "Platform steering committee",
+        component: () => import("../views/PlatformSteeringCommittee.vue")
       },
       {
         path: "advisory_board",

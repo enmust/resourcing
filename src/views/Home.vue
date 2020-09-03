@@ -303,6 +303,13 @@
                   {{ member.name }}
                 </div>
                 <div class="text-body-1 mb-1">{{ member.institute }}</div>
+                <div
+                  v-if="member.institute_extra"
+                  class="text-body-1 mb-1"
+                  style="font-size: 15px;"
+                >
+                  {{ member.institute_extra }}
+                </div>
                 <div class="text-body-2">{{ member.job }}</div>
               </v-card-text>
             </v-card>
@@ -437,13 +444,15 @@ export default {
       {
         name: "Andreas Endl",
         institute: "Vienna University of Economics and Business",
+        institute_extra: "Institute for Managing Sustainability",
         job: "Project coordination & research",
         img: require("../assets/img/members/andreas_endl.jpg")
       },
       {
         name: "Gerald Berger",
         institute:
-          "Institute for Managing Sustainability, Vienna University of Economics and Business",
+          "Vienna University of Economics and Business",
+        institute_extra: "Institute for Managing Sustainability",
         job: "Project coordination & event and peer learning design",
         img: require("../assets/img/members/gerald_berger.jpg")
       },
@@ -556,13 +565,14 @@ export default {
       {
         name: "Noé Barriere",
         institute: "Vienna University of Economics of Business",
+        institute_extra: "Institute for Managing Sustainability",
         job: "Peer learning on innovative business cases",
         img: require("../assets/img/members/noe_barriere.jpg")
       },
       {
         name: "Alexander Graf",
-        institute:
-          "Institute for Managing Sustainability, Vienna University of Economics and Business",
+        institute: "Vienna University of Economics and Business",
+        institute_extra: "Institute for Managing Sustainability",
         job: "Project Coordination & Research",
         img: require("../assets/img/members/alexander_graf.jpg")
       }

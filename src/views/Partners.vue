@@ -112,7 +112,7 @@ export default {
         link: "www.wrforum.org",
         img: require("../assets/logos/World_resources_forum.jpg"),
         text:
-          "The Vienna University of Economics and Business (WU) is a leading academic institution and one of Europe's most attractive universities in business and economics. The Institute for Managing Sustainability has long-standing experience in co-ordinating European research projects (in FP5-7; Horizon 2020), has built up extensive experience in organising stakeholder dialogues and peer learning events by applying various interactive conference and workshop formats in different contexts (e.g. in the FP7 and Horizon 2020 projects MIN-GUIDE, MINLAND, COBALT, DYNAMIX and coordinating the European Sustainable Development Network - ESDN). The Institute for Managing Sustainability has extensive experience with policy analysis (institutions, policy sectors, policies, strategies, etc.) at the EU and EU MS level."
+          "The World Resources Forum Association (WRFA) is an independent non-profit international organization that serves as a platform connecting and fostering knowledge exchange on resources management amongst business leaders, policy-makers, NGOs, scientists and the public. The World Resources Forum (WRF) conference is the WRFA’s flagship event and is held annually. WRFA is also involved in multi-stakeholder dialogue projects such as the H2020 projects FORAM, CEWASTE and CICERONE, and various development cooperation programs, among others the Sustainable Recycling Industries (SRI) programme and several UN initiatives."
       },
       {
         name: "MONTANUNIVERSITÄT LEOBEN, Austria",

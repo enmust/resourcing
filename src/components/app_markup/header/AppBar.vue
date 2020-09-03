@@ -53,8 +53,8 @@
           <v-list-item to="/about/partners" exact>
             <v-list-item-title>PARTNERS</v-list-item-title>
           </v-list-item>
-          <v-list-item to="/about/platform_steering_commitee" exact>
-            <v-list-item-title>PLATFORM STEERING COMMITEE</v-list-item-title>
+          <v-list-item to="/about/platform_steering_committee" exact>
+            <v-list-item-title>PLATFORM STEERING COMMITTEE</v-list-item-title>
           </v-list-item>
           <v-list-item to="/about/advisory_board" exact>
             <v-list-item-title>ADVISORY BOARD</v-list-item-title>

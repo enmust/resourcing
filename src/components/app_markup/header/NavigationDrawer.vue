@@ -64,8 +64,8 @@ export default {
       },
       {
         icon: "fas fa-user-friends",
-        text: "Platform Steering Commitee",
-        url: "/about/platform_steering_commitee"
+        text: "Platform Steering Committee",
+        url: "/about/platform_steering_committee"
       },
       {
         icon: "fas fa-chalkboard-teacher",

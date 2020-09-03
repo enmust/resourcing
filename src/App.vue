@@ -45,7 +45,7 @@ export default {
         name === "About" ||
         name === "Purpose and objectives" ||
         name === "Partners" ||
-        name === "Platform steering commitee" ||
+        name === "Platform steering committee" ||
         name === "Advisory board"
       )
         return "primary5";
@@ -65,7 +65,7 @@ export default {
         name !== "About" &&
         name !== "Purpose and objectives" &&
         name !== "Partners" &&
-        name !== "Platform steering commitee" &&
+        name !== "Platform steering committee" &&
         name !== "Advisory board" &&
         name !== "Knowledge hub" &&
         name !== "Wiki on rs" &&

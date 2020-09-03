@@ -1,11 +1,11 @@
 <template>
-  <div class="platform-steering-commitee">
+  <div class="platform-steering-committee">
     <v-row no-gutters class="my-2">
       <v-col class="mx-auto pa-3" cols="12" sm="11" md="10" lg="8" xl="6">
         <v-card color="primary4" elevation="4">
           <v-card-title
             class="text-h5 font-weight-bold primary--text d-flex justify-center"
-            >Steering Commitee</v-card-title
+            >Steering Committee</v-card-title
           >
           <v-card-text class="text-h7 text-justify"
             >The RE-SOURCING Platform Steering Committee (PSC) is a board of
@@ -19,7 +19,7 @@
               class="pa-2"
               cols="12"
               md="6"
-              v-for="(entity, index) in steeringCommitee"
+              v-for="(entity, index) in steeringCommittee"
               :key="index"
             >
               <v-card
@@ -31,7 +31,12 @@
                 <div
                   class="align-self-center"
                   v-if="entity.img"
-                  :class="{ 'py-2 pl-2': $vuetify.breakpoint.xsOnly }"
+                  :class="{
+                    'py-2 pl-2': $vuetify.breakpoint.xsOnly,
+                    'pl-1':
+                      entity.name === 'Raffaele Rossi' ||
+                      entity.name === 'Julia Poliscanova'
+                  }"
                 >
                   <v-img
                     v-if="entity.img"
@@ -70,9 +75,9 @@
 </template>
 <script>
 export default {
-  name: "PlatformSteeringCommitee",
+  name: "PlatformSteeringCommittee",
   data: () => ({
-    steeringCommitee: [
+    steeringCommittee: [
       {
         name: "Guy Ethier",
         title: "Chair, Global Battery Alliance Executive Board",
@@ -108,6 +113,18 @@ export default {
         title: "Analyst",
         organisation: "The Swedish Agency for Growth Policy Analysis",
         img: require("../assets/logos/The_Swedish_Agency_for_Growth_Analysis.jpg")
+      },
+      {
+        name: "Raffaele Rossi",
+        title: "Policy Analyst",
+        organisation: "Solarpower Europe",
+        img: require("../assets/logos/SolarPowerEurope.jpg")
+      },
+      {
+        name: "Julia Poliscanova",
+        title: "Senior Director, Vehicles & Emobility",
+        organisation: "Transport & Environment",
+        img: require("../assets/logos/Transport_Environment.jpg")
       },
       {
         name: "Marti Flacks",

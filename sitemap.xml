@@ -13,6 +13,12 @@
         <loc>https://re-sourcing.eu/about/partners</loc>
     </url>
     <url>
+        <loc>https://re-sourcing.eu/about/platform_steering_committee</loc>
+    </url>
+    <url>
+        <loc>https://re-sourcing.eu/about/advisory_board</loc>
+    </url>
+    <url>
         <loc>https://re-sourcing.eu/target_groups</loc>
     </url>
     <url>
@@ -38,11 +44,5 @@
     </url>
     <url>
         <loc>https://re-sourcing.eu/contact</loc>
-    </url>
-    <url>
-        <loc>https://re-sourcing.eu/legal_notice</loc>
-    </url>
-    <url>
-        <loc>https://re-sourcing.eu/privacy_policy</loc>
     </url>
 </urlset>
