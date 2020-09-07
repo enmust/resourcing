@@ -104,7 +104,7 @@ export default {
       {
         name: "Legal Notice & Privacy Policy",
         url:
-          "https://re-sourcing.eu/RE-SOURCING%20website%20%E2%80%93%20Privacy%20Policy%20and%20Legal%20Notice%20v%201.0%20(2020-03-02).pdf",
+          "https://re-sourcing.eu/files/RE-SOURCING%20website%20%E2%80%93%20Privacy%20Policy%20and%20Legal%20Notice%20v%201.0%20(2020-03-02).pdf",
         isLink: true
       }
     ]

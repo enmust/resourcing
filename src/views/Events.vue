@@ -7,7 +7,7 @@
     class="events text-justify"
   >
     <v-card flat class="mb-4" color="transparent">
-      <v-card-title class="primary--text text-h4 pb-1"
+      <v-card-title class="primary--text text-h4 pb-1 font-weight-bold"
         >Physical events</v-card-title
       >
 
@@ -26,44 +26,44 @@
       <v-row no-gutters>
         <v-col
           cols="12"
-          md="4"
+          lg="4"
           v-for="(event, index) in physicalEvents"
           :key="index"
         >
           <v-hover v-slot:default="{ hover }">
-            <v-card class="pa-2 mx-3 my-3" :elevation="hover ? 12 : 4">
-              <v-img
-                :src="
-                  require('../assets/logos/project_logo/re-sourcing_500px.jpg')
-                "
-                max-width="500"
-              >
-              </v-img>
+            <v-card
+              class="pa-2 mx-3 my-3"
+              hover
+              :elevation="hover ? 12 : 4"
+              @click="event.showInfo = !event.showInfo"
+            >
+              <div class="d-flex justify-center" style="min-height: 200px;">
+                <div
+                  class="text-h4 primary--text font-weight-light pa-2 align-self-center text-center"
+                >
+                  {{ event.title }}
+                </div>
+              </div>
 
               <v-card-actions class="pa-0">
-                <v-card-title
-                  @click="event.showInfo = !event.showInfo"
-                  class="primary--text font-weight-bold text-uppercase justify-end pb-1 link"
-                  >{{ event.title }}</v-card-title
+                <v-img
+                  :src="
+                    require('../assets/logos/project_logo/re-sourcing_transparent.png')
+                  "
+                  max-width="125"
                 >
+                </v-img>
+
                 <v-spacer />
 
-                <v-btn
-                  icon
-                  :aria-label="`toggle ${event.title} info`"
-                  @click="event.showInfo = !event.showInfo"
-                >
+                <v-btn icon :aria-label="`toggle ${event.title} info`">
                   <v-icon v-if="event.showInfo">fas fa-angle-up</v-icon>
                   <v-icon v-else>fas fa-angle-down</v-icon>
                 </v-btn>
               </v-card-actions>
 
               <v-card-text class="text-body-1" v-if="event.showInfo">
-                <div
-                  v-if="event.title === 'Roadmap Workshops'"
-                  v-html="event.text"
-                />
-                <div v-else>{{ event.text }}</div>
+                <div v-html="event.text" />
               </v-card-text>
             </v-card>
           </v-hover>
@@ -72,47 +72,51 @@
     </v-card>
 
     <v-card flat color="transparent" class="mb-4">
-      <v-card-title class="primary--text text-h4 pb-1"
-        >Project events</v-card-title
+      <v-card-title class="primary--text text-h4 pb-1 font-weight-bold"
+        >Virtual events</v-card-title
       >
 
       <v-row no-gutters>
         <v-col
           cols="12"
-          md="4"
+          lg="4"
           v-for="(event, index) in projectEvents"
           :key="index"
         >
           <v-hover v-slot:default="{ hover }">
-            <v-card class="pa-2 mx-3 my-3" :elevation="hover ? 12 : 4">
-              <v-img
-                :src="
-                  require('../assets/logos/project_logo/re-sourcing_500px.jpg')
-                "
-                max-width="500"
-              >
-              </v-img>
+            <v-card
+              class="pa-2 mx-3 my-3"
+              hover
+              :elevation="hover ? 12 : 4"
+              @click="event.showInfo = !event.showInfo"
+            >
+              <div class="d-flex justify-center" style="min-height: 200px;">
+                <div
+                  class="text-h4 primary--text font-weight-light pa-2 align-self-center text-center"
+                >
+                  {{ event.title }}
+                </div>
+              </div>
 
               <v-card-actions class="pa-0">
-                <v-card-title
-                  @click="event.showInfo = !event.showInfo"
-                  class="primary--text font-weight-bold text-uppercase justify-end pb-1 link"
-                  >{{ event.title }}</v-card-title
+                <v-img
+                  :src="
+                    require('../assets/logos/project_logo/re-sourcing_transparent.png')
+                  "
+                  max-width="125"
                 >
+                </v-img>
+
                 <v-spacer />
 
-                <v-btn
-                  icon
-                  :aria-label="`toggle ${event.title} info`"
-                  @click="event.showInfo = !event.showInfo"
-                >
+                <v-btn icon :aria-label="`toggle ${event.title} info`">
                   <v-icon v-if="event.showInfo">fas fa-angle-up</v-icon>
                   <v-icon v-else>fas fa-angle-down</v-icon>
                 </v-btn>
               </v-card-actions>
 
               <v-card-text class="text-body-1" v-if="event.showInfo">
-                {{ event.text }}
+                <div v-html="event.text" />
               </v-card-text>
             </v-card>
           </v-hover>
@@ -169,26 +173,32 @@ export default {
     physicalEvents: [
       {
         title: "Conferences",
-        showInfo: false,
-        text:
-          "Two physical Conferences will aim to ensure continued and more personal, face to face networking opportunities for stakeholders. The conference will incorporate top-level keynotes, lively panel discussions, interactive working groups and attract over 300 participants from all over the globe."
+        showInfo: true,
+        text: `
+          <div class="text-center font-weight-bold mb-2">SAVE THE DATE</div>
+          <div class="text-center font-weight-bold mb-2">RE-SOURCING Opening Conference</div>
+          <div class="text-center font-weight-bold mb-6">on 18-19 January 2021, Vienna</div>
+          <div class="mb-3">The Opening Conference of the <b>RE-SOURCING project</b> will take place on <b>18-19 January 2021</b>. It is currently planned as physical event for 150 participants in Vienna. However, due to the current COVID-19 situation, a decision about the conference being held physically in Vienna, as a fully virtual event, or a hybrid event (with participants attending the event physically in Vienna, while other will joint virtually) will be taken at a later stage.</div>
+          <div class="mb-3">The Opening Conference will enable participants to engage in an open and comprehensive dialogue with representatives from all relevant stakeholder groups (industry, policy, CSOs and research) on the topic of responsible sourcing in global mineral value chains. We will investigate current challenges and opportunities in three industry sectors (<b class="accent--text">renewable energy</b>, <b class="accent2--text">mobility</b> & ICT) as well as address the global situation of responsible sourcing and how this affects European companies.</div>
+          <div class="mb-3">Apart from keynote presentations from high-level international and European speakers, the conference will comprise of various interactive formats that allow a meaningful and yet informal exchange among all participants.</div>
+          <div class="mb-4">More detailed information on the agenda and the registration process will be provided in a few weeks.</div>
+          <div class="text-center font-weight-bold mb-3">So stay tuned and save-the date – we are very much looking forward to meeting and discussing with you at the RE-SOURCING Opening Conference!</div>`
       },
       {
         title: "Roadmap Workshops",
-        showInfo: false,
+        showInfo: true,
         text: `
-          <div class="mb-2" style="font-size: 18px;">Virtual Roadmap Workshop</div>
-          <div class="mb-2">Responsible sourcing in the renewable energy supply chain – a reality or still a long way to go?</div>
-          <div class="mb-2">The RE-SOURCING project is aiming to develop a roadmap for the renewable energy sector to achieve a sustainable and responsible value chain. To do that we need YOUR support!</div>
-          <div class="mb-2">Join us in the Virtual Roadmap Workshop</div>
-          <div class="mb-2 ml-6">on <b>29 October 2020, 1:30-5:00 pm</b></div>
-          <div class="mb-2"> and support us with your expertise in the renewable energy sector.</div>
-          <div class="mb-2"> Our focus will be on</div>
-          <ul>
+          <div class="text-center font-weight-bold mb-1">Virtual Roadmap Workshop</div>
+          <div class="text-center font-weight-bold mb-3" style="font-size: 14px;">Responsible sourcing in the renewable energy supply chain – a reality or still a long way to go?</div>
+          <div class="text-center font-weight-bold mb-3">on 29 October 2020, 1:30-5:00 pm</div>
+          <div class="mb-4">The RE-SOURCING project is aiming to develop a roadmap for the renewable energy sector to achieve a sustainable and responsible value chain. To achieve this goal a virtual roadmap workshop will be held on <b>29 October 2020, 13:30-17:00 CET</b>.</div>
+          <div class="font-weight-bold mb-4">At this workshop, our focus will be on:</div>
+          <ul class="mb-4">
             <li>mining & processing of copper, rare earth elements, and silicon</li>
             <li>manufacturing and recycling of wind turbines and solar panels</li>
             <li>standards for sustainability and responsible sourcing</li>
-          </ul>`
+          </ul>
+          <div>We will shortly provide you with more details about the event.</div>`
       },
       {
         title: "Flagship Labs",
@@ -200,9 +210,13 @@ export default {
     projectEvents: [
       {
         title: "Virtual Conferences",
-        showInfo: false,
-        text:
-          "2 virtual events will incorporate top-level webcasts, live keynotes, a virtual exhibition, webinars and Q&A bulletin boards and attract over 500 participants from all over the globe."
+        showInfo: true,
+        text: `
+        <div class="text-center font-weight-bold mb-2">RE-SOURCING Virtual Event</div>
+        <div class="text-center font-weight-bold mb-2">“Disruptions to Responsible Sourcing; The Good, The Bad and The Ugly”</div>
+        <div class="text-center font-weight-bold mb-5">On 9 October 2020, 10:00-13:30 CET</div>
+        <div class="mb-3"><b>The RE-SOURCING project</b> will be hosting its first virtual event on the <b>9th of October, 10:00 to 13:30 CET</b>. This event will outline the responsible sourcing challenges for businesses transitioning their practices, particularly in the face of emerging challenges from Covid-19 and the expected impetus for materials demand resulting from the Green Deal. The event explores the positives and negatives for responsible sourcing in the short, medium and long term.</div>
+        <div><b>Who should attend this event</b>: Given the disruptions in 2020, the social, environmental and economic impacts and consequences for responsible sourcing within mineral supply chains will be of interest to EU business and those who advocate responsible business practices in the mineral sector. As an industry stakeholder, mining company, EU business incorporating responsible sourcing practices and civil society member, you should attend this event to initiate your engagement with the RE-SOURCING project network.</div>`
       },
       {
         title: "Webinars",
@@ -231,7 +245,15 @@ export default {
       "pilt11",
       "pilt12"
     ]
-  })
+  }),
+  watch: {
+    "$route.query": {
+      handler(newVal) {
+        console.log(newVal);
+      },
+      immediate: true
+    }
+  }
 };
 </script>
 

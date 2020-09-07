@@ -157,7 +157,7 @@
                   ></v-img>
                 </div>
 
-                <div class="mt-2 text-h6 link">
+                <div class="mt-2 text-h6 link" style="font-size: 16px">
                   <a
                     href="https://www.wu.ac.at/en/sustainability/news-details/detail/eu-project-re-sourcing-successful-project-kick-off-meeting-at-the-wu-vienna"
                     target="NewsWindow"
@@ -189,7 +189,14 @@
                   <v-icon style="color: #2867B2">fab fa-linkedin</v-icon>
                 </v-btn>
 
-                <v-btn icon aria-label="twitter">
+                <v-btn
+                  icon
+                  aria-label="twitter"
+                  href="https://twitter.com/re_sourcing"
+                  target="TwitterWindow"
+                  rel="noopener noreferrer"
+                  title="Twitter"
+                >
                   <v-icon style="color: #1DA1F2">fab fa-twitter</v-icon>
                 </v-btn>
 
@@ -223,18 +230,35 @@
                 >Upcoming events</v-card-title
               >
 
-              <v-card-text>
-                <div class="d-flex justify-center">
-                  <v-img
-                    contain
-                    max-width="400"
-                    aspect-ratio="1.778"
-                    :src="
-                      require('../assets/logos/project_logo/re-sourcing_transparent.png')
-                    "
-                  ></v-img>
-                </div>
-              </v-card-text>
+              <ul class="ml-4 pr-4 pb-2">
+                <li>
+                  <router-link to="/events"
+                    >RE-SOURCING Virtual Event</router-link
+                  >
+                </li>
+
+                <li>
+                  <router-link to="/events"
+                    >Virtual Roadmap Workshop</router-link
+                  >
+                </li>
+
+                <li>
+                  <router-link to="/events"
+                    >Opening Conference</router-link
+                  >
+                </li>
+              </ul>
+
+              <v-card-actions>
+                <v-img
+                  :src="
+                    require('../assets/logos/project_logo/re-sourcing_transparent.png')
+                  "
+                  max-width="125"
+                >
+                </v-img>
+              </v-card-actions>
             </v-card>
           </v-col>
         </v-row>
@@ -450,8 +474,7 @@ export default {
       },
       {
         name: "Gerald Berger",
-        institute:
-          "Vienna University of Economics and Business",
+        institute: "Vienna University of Economics and Business",
         institute_extra: "Institute for Managing Sustainability",
         job: "Project coordination & event and peer learning design",
         img: require("../assets/img/members/gerald_berger.jpg")

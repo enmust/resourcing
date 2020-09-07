@@ -14,6 +14,34 @@
         </div>
 
         <v-row class="mt-5">
+          <v-col cols="12">
+            <p
+              class="text-h5 white--text font-weight-bold"
+            >
+              Newsletter: September 2020
+            </p>
+
+            <p class="text-h7">
+              1st edition of our Newsletter, which brings to you the most recent
+              developments as well as actions and events of the RE-SOURCING
+              project. We bring together businesses, policy makers and civil
+              society in their endeavor to establish Responsible Sourcing. In
+              this Newsletter you will find important and first-hand information
+              about the following topics which we hope are useful for your work.
+            </p>
+
+            <div class="text-h7">
+              <ul>
+                <li>RE-SOURCING Project at a Glance</li>
+                <li>Latest News</li>
+                <li>Upcoming Events</li>
+                <li>Recent Publications</li>
+              </ul>
+            </div>
+          </v-col>
+        </v-row>
+
+        <v-row class="mt-5">
           <v-col cols="12" sm="12" md="5">
             <v-img
               class="rounded"
