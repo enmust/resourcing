@@ -113,6 +113,11 @@ export default {
         url: "/knowledge_hub/sector_state_of_plays"
       },
       {
+        icon: "fas fa-download",
+        text: "Project Outputs",
+        url: "/knowledge_hub/project_outputs"
+      },
+      {
         icon: "far fa-address-book",
         text: "Contact",
         url: "/contact"

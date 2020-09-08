@@ -80,6 +80,11 @@ const routes = [
         path: "sector_state_of_plays",
         name: "Sector state of plays",
         component: () => import("../views/SectorStateOfPlays.vue")
+      },
+      {
+        path: "project_outputs",
+        name: "Project outputs",
+        component: () => import("../views/ProjectOutputs.vue")
       }
     ]
   },

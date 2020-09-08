@@ -96,6 +96,9 @@
           <v-list-item to="/knowledge_hub/sector_state_of_plays" exact>
             <v-list-item-title>SECTOR STATE OF PLAYS</v-list-item-title>
           </v-list-item>
+          <v-list-item to="/knowledge_hub/project_outputs" exact>
+            <v-list-item-title>PROJECT OUTPUTS</v-list-item-title>
+          </v-list-item>
         </v-list>
       </v-menu>
 

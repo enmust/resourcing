@@ -32,6 +32,7 @@
         >
           <v-hover v-slot:default="{ hover }">
             <v-card
+              :id="event.title.replaceAll(' ', '_')"
               class="pa-2 mx-3 my-3"
               hover
               :elevation="hover ? 12 : 4"
@@ -80,12 +81,13 @@
         <v-col
           cols="12"
           lg="4"
-          v-for="(event, index) in projectEvents"
+          v-for="(event, index) in virtualEvents"
           :key="index"
         >
           <v-hover v-slot:default="{ hover }">
             <v-card
               class="pa-2 mx-3 my-3"
+              :id="event.title.replaceAll(' ', '_')"
               hover
               :elevation="hover ? 12 : 4"
               @click="event.showInfo = !event.showInfo"
@@ -146,7 +148,7 @@
           :key="index"
         >
           <v-hover v-slot:default="{ hover }">
-            <v-card class="pa-2 mx-3 my-3" :elevation="hover ? 12 : 4">
+            <v-card class="pa-2 mx-3 my-3" :elevation="hover ? 12 : 4" hover>
               <v-img
                 :src="
                   require('../assets/logos/project_logo/re-sourcing_500px.jpg')
@@ -173,7 +175,7 @@ export default {
     physicalEvents: [
       {
         title: "Conferences",
-        showInfo: true,
+        showInfo: false,
         text: `
           <div class="text-center font-weight-bold mb-2">SAVE THE DATE</div>
           <div class="text-center font-weight-bold mb-2">RE-SOURCING Opening Conference</div>
@@ -186,7 +188,7 @@ export default {
       },
       {
         title: "Roadmap Workshops",
-        showInfo: true,
+        showInfo: false,
         text: `
           <div class="text-center font-weight-bold mb-1">Virtual Roadmap Workshop</div>
           <div class="text-center font-weight-bold mb-3" style="font-size: 14px;">Responsible sourcing in the renewable energy supply chain – a reality or still a long way to go?</div>
@@ -207,10 +209,10 @@ export default {
           "RE-SOURCING will organise three sector-specific Flagship Lab Workshops for peer learning. Peer learning will serve to: 1) learn from good practice in FS cases; 2) develop an action catalogue for unresolved challenges in the FS cases; and 3) provide input to contextualise and generalise good practice factors in other organisational and EU MS settings (in preparation to Good Practice Guidance Reports)."
       }
     ],
-    projectEvents: [
+    virtualEvents: [
       {
         title: "Virtual Conferences",
-        showInfo: true,
+        showInfo: false,
         text: `
         <div class="text-center font-weight-bold mb-2">RE-SOURCING Virtual Event</div>
         <div class="text-center font-weight-bold mb-2">“Disruptions to Responsible Sourcing; The Good, The Bad and The Ugly”</div>
@@ -246,12 +248,24 @@ export default {
       "pilt12"
     ]
   }),
-  watch: {
-    "$route.query": {
-      handler(newVal) {
-        console.log(newVal);
-      },
-      immediate: true
+
+  mounted() {
+    if (this.$route.query && this.$route.query.tab) {
+      let tab = this.$route.query.tab;
+
+      this.physicalEvents.forEach(item => {
+        if (item.title === tab) {
+          item.showInfo = true;
+          this.$vuetify.goTo(`#${tab.replaceAll(" ", "_")}`, { offset: -40 });
+        } else item.showInfo = false;
+      });
+
+      this.virtualEvents.forEach(item => {
+        if (item.title === tab) {
+          item.showInfo = true;
+          this.$vuetify.goTo(`#${tab.replaceAll(" ", "_")}`, { offset: -40 });
+        } else item.showInfo = false;
+      });
     }
   }
 };

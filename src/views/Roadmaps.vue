@@ -31,25 +31,29 @@
         <v-row no-gutters>
           <v-col
             cols="12"
-            sm="4"
+            md="4"
             v-for="(event, index) in projectEvents"
             :key="index"
           >
             <v-hover v-slot:default="{ hover }">
               <v-card class="pa-2 mx-3 my-3" :elevation="hover ? 12 : 4" hover>
-                <v-img
-                  :src="
-                    require('../assets/logos/project_logo/re-sourcing_500px.jpg')
-                  "
-                  max-width="500"
-                >
-                </v-img>
+                <div class="d-flex justify-center" style="min-height: 200px;">
+                  <div
+                    class="text-h4 primary--text font-weight-light pa-2 align-self-center text-center"
+                  >
+                    {{ event.title }}
+                  </div>
+                </div>
 
-                <v-card-title
-                  class="primary--text font-weight-bold justify-center"
-                  style="word-break: break-word"
-                  >{{ event.title }}</v-card-title
-                >
+                <v-card-actions class="pa-0">
+                  <v-img
+                    :src="
+                      require('../assets/logos/project_logo/re-sourcing_transparent.png')
+                    "
+                    max-width="125"
+                  >
+                  </v-img>
+                </v-card-actions>
               </v-card>
             </v-hover>
           </v-col>
@@ -57,7 +61,8 @@
 
         <v-row>
           <v-col cols="12" class="text-h7 text-justify">
-            More information will be added as the RE-SOURCING project progresses.
+            More information will be added as the RE-SOURCING project
+            progresses.
           </v-col>
         </v-row>
       </v-col>

@@ -143,29 +143,17 @@
             <v-card>
               <v-card-title
                 @click="$router.push('news')"
-                class="text-h5 primary--text text-decoration-underline link"
+                class="text-h5 primary--text link"
                 >Latest news</v-card-title
               >
 
-              <v-card-text>
-                <div class="d-flex justify-center">
-                  <v-img
-                    contain
-                    max-width="400"
-                    aspect-ratio="1.778"
-                    :src="require('../assets/img/news/news.jpg')"
-                  ></v-img>
-                </div>
-
-                <div class="mt-2 text-h6 link" style="font-size: 16px">
-                  <a
-                    href="https://www.wu.ac.at/en/sustainability/news-details/detail/eu-project-re-sourcing-successful-project-kick-off-meeting-at-the-wu-vienna"
-                    target="NewsWindow"
-                    >EU project RE-SOURCING: Successful project Kick-off meeting
-                    at the WU Vienna</a
+              <ul class="ml-4 pr-4 pb-2">
+                <li>
+                  <router-link class="link" to="/news"
+                  >Newsletter: September 2020</router-link
                   >
-                </div>
-              </v-card-text>
+                </li>
+              </ul>
 
               <v-card-actions class="d-flex flex-wrap">
                 <v-btn
@@ -226,25 +214,25 @@
             <v-card>
               <v-card-title
                 @click="$router.push('events')"
-                class="text-h5 primary--text text-decoration-underline link"
+                class="text-h5 primary--text link"
                 >Upcoming events</v-card-title
               >
 
               <ul class="ml-4 pr-4 pb-2">
                 <li>
-                  <router-link to="/events"
+                  <router-link class="link" to="/events?tab=Virtual Conferences"
                     >RE-SOURCING Virtual Event</router-link
                   >
                 </li>
 
                 <li>
-                  <router-link to="/events"
+                  <router-link class="link" to="/events?tab=Roadmap Workshops"
                     >Virtual Roadmap Workshop</router-link
                   >
                 </li>
 
                 <li>
-                  <router-link to="/events"
+                  <router-link class="link" to="/events?tab=Conferences"
                     >Opening Conference</router-link
                   >
                 </li>

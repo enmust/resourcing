@@ -71,7 +71,8 @@ export default {
         name !== "Wiki on rs" &&
         name !== "Flagship cases" &&
         name !== "Roadmaps" &&
-        name !== "Sector state of plays"
+        name !== "Sector state of plays" &&
+        name !== "Project outputs"
       );
     }
   }
