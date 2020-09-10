@@ -49,7 +49,7 @@
               video: $vuetify.breakpoint.mdAndDown,
               'video-large-screen': $vuetify.breakpoint.lgAndUp
             }"
-            src="https://www.youtube.com/embed/T5qOGGS03mE"
+            src="https://www.youtube.com/embed/_Vyx1wkvTgE"
             allowfullscreen
             frameborder="0"
           ></iframe>
@@ -144,6 +144,7 @@
               <v-card-title
                 @click="$router.push('news')"
                 class="text-h5 primary--text link"
+                style="word-break: break-word;"
                 >Latest news</v-card-title
               >
 
@@ -158,7 +159,9 @@
               <v-card-actions class="d-flex flex-wrap">
                 <v-btn
                   small
-                  @click="$vuetify.goTo('.subscribe')"
+                  href="https://re-sourcing.us9.list-manage.com/subscribe?u=4131de53447fbeab61124f6d0&id=2a1f831795"
+                  target="SubscribeWindow"
+                  rel="noopener noreferrer"
                   color="accent3"
                   aria-label="Go to subscribe form"
                 >
@@ -195,10 +198,10 @@
                 <v-btn
                   icon
                   aria-label="youtube"
-                  href="https://www.youtube.com/watch?v=T5qOGGS03mE"
+                  href="https://www.youtube.com/watch?v=_Vyx1wkvTgE"
                   target="YoutubeWindow"
                   rel="noopener noreferrer"
-                  title="RE SOURCING Projekt Trailer"
+                  title="RE-SOURCING Imagevideo"
                 >
                   <v-icon style="color: #FF0000">fab fa-youtube</v-icon>
                 </v-btn>
@@ -215,6 +218,7 @@
               <v-card-title
                 @click="$router.push('events')"
                 class="text-h5 primary--text link"
+                style="word-break: break-word;"
                 >Upcoming events</v-card-title
               >
 
@@ -342,26 +346,16 @@
           Be the first to read what's new! Subscribe to mailing list:
         </div>
 
-        <div class="d-flex flex-row mx-auto mb-2" style="max-width: 400px;">
-          <v-text-field
-            v-model="usersEmailAddress"
-            dense
-            height="44"
-            solo
-            hide-details
-            class="mr-2"
-            placeholder="Enter your email address"
-            type="email"
-            aria-label="Enter your email address"
-          ></v-text-field>
-
+        <div class="d-flex flex-row mx-auto mb-2 justify-center" style="max-width: 400px;">
           <v-btn
             :fab="$vuetify.breakpoint.xsOnly"
-            @click="subscribeToMailingList()"
+            href="https://re-sourcing.us9.list-manage.com/subscribe?u=4131de53447fbeab61124f6d0&id=2a1f831795"
             :large="$vuetify.breakpoint.smAndUp"
             :height="$vuetify.breakpoint.xsOnly ? 44 : ''"
             :width="$vuetify.breakpoint.xsOnly ? 44 : ''"
             color="accent3"
+            target="SubscribeWindow"
+            title="Go to subscribe form"
           >
             <span class="hidden-xs-only text-body-1 align-self-center"
               >Subscribe</span
