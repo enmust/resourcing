@@ -151,10 +151,19 @@
               <ul class="ml-4 pr-4 pb-2">
                 <li>
                   <router-link class="link" to="/news"
-                  >Newsletter: September 2020</router-link
+                    >Newsletter: September 2020</router-link
                   >
                 </li>
               </ul>
+
+              <v-card-text class="px-0 py-2">
+                <a
+                  class="twitter-timeline"
+                  data-height="400"
+                  href="https://twitter.com/re_sourcing?ref_src=twsrc%5Etfw"
+                  >Tweets by re_sourcing</a
+                >
+              </v-card-text>
 
               <v-card-actions class="d-flex flex-wrap">
                 <v-btn
@@ -191,10 +200,6 @@
                   <v-icon style="color: #1DA1F2">fab fa-twitter</v-icon>
                 </v-btn>
 
-                <v-btn icon aria-label="facebook">
-                  <v-icon style="color: #4267B2">fab fa-facebook</v-icon>
-                </v-btn>
-
                 <v-btn
                   icon
                   aria-label="youtube"
@@ -204,10 +209,6 @@
                   title="RE-SOURCING Imagevideo"
                 >
                   <v-icon style="color: #FF0000">fab fa-youtube</v-icon>
-                </v-btn>
-
-                <v-btn icon aria-label="instagram">
-                  <v-icon>fab fa-instagram</v-icon>
                 </v-btn>
               </v-card-actions>
             </v-card>
@@ -346,7 +347,10 @@
           Be the first to read what's new! Subscribe to mailing list:
         </div>
 
-        <div class="d-flex flex-row mx-auto mb-2 justify-center" style="max-width: 400px;">
+        <div
+          class="d-flex flex-row mx-auto mb-2 justify-center"
+          style="max-width: 400px;"
+        >
           <v-btn
             :fab="$vuetify.breakpoint.xsOnly"
             href="https://re-sourcing.us9.list-manage.com/subscribe?u=4131de53447fbeab61124f6d0&id=2a1f831795"
@@ -383,7 +387,7 @@
         </div>
 
         <v-row>
-          <v-col cols="12" sm="4">
+          <v-col cols="12" sm="6">
             <v-hover v-slot:default="{ hover }">
               <v-card
                 class="py-2 px-3 d-flex justify-center"
@@ -398,7 +402,7 @@
             </v-hover>
           </v-col>
 
-          <v-col cols="12" sm="4">
+          <v-col cols="12" sm="6">
             <v-hover v-slot:default="{ hover }">
               <v-card
                 class="py-2 px-3 d-flex justify-center"
@@ -406,23 +410,11 @@
                 hover
                 min-height="250"
               >
-                <v-icon style="color: #4267B2" x-large
-                  >fab fa-facebook-square</v-icon
-                >
-              </v-card>
-            </v-hover>
-          </v-col>
-
-          <v-col cols="12" sm="4">
-            <v-hover v-slot:default="{ hover }">
-              <v-card
-                class="py-2 px-3 d-flex justify-center"
-                :elevation="hover ? 12 : 4"
-                hover
-                min-height="250"
-              >
-                <v-icon style="color: #1DA1F2" x-large
-                  >fab fa-twitter-square</v-icon
+                <a
+                  class="twitter-timeline"
+                  data-height="400"
+                  href="https://twitter.com/re_sourcing?ref_src=twsrc%5Etfw"
+                  >Tweets by re_sourcing</a
                 >
               </v-card>
             </v-hover>
@@ -584,6 +576,15 @@ export default {
     ]
   }),
 
+  mounted() {
+    let twitterScript = document.createElement("script");
+    twitterScript.setAttribute(
+      "src",
+      "https://platform.twitter.com/widgets.js"
+    );
+    document.head.appendChild(twitterScript);
+  },
+
   methods: {
     subscribeToMailingList() {
       if (this.validateEmail(this.usersEmailAddress)) {
@@ -620,38 +621,6 @@ export default {
 .stefanie_degreif .v-image__image,
 .karin_robam .v-image__image {
   background-position: top !important;
-}
-
-.fa-instagram {
-  color: transparent;
-  background: radial-gradient(
-    circle at 30% 107%,
-    #ffdc80 0%,
-    #fcaf45 10%,
-    #f77737 20%,
-    #f56040 30%,
-    #fd1d1d 40%,
-    #e1306c 50%,
-    #c13584 60%,
-    #833ab4 70%,
-    #5851db 80%,
-    #405de6 90%
-  );
-  background: -webkit-radial-gradient(
-    circle at 30% 107%,
-    #ffdc80 0%,
-    #fcaf45 10%,
-    #f77737 20%,
-    #f56040 30%,
-    #fd1d1d 40%,
-    #e1306c 50%,
-    #c13584 60%,
-    #833ab4 70%,
-    #5851db 80%,
-    #405de6 90%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 .video-container {

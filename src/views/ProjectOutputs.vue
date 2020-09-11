@@ -27,11 +27,14 @@
             current RS approaches are attempting to address these.
           </v-col>
 
-          <v-col
-            cols="12"
-            class="text-h7 text-justify text-decoration-underline font-italic mb-6"
-          >
-            Download report
+          <v-col cols="12" class="text-h7 text-justify mb-6">
+            <a
+              class="text-decoration-underline font-italic link white--text"
+              href="https://re-sourcing.eu/files/D1.1_In RS template_FINAL.pdf"
+              target="ReportWindow"
+              rel="noopener noreferrer"
+              >Download report</a
+            >
           </v-col>
         </v-row>
 
@@ -51,7 +54,13 @@
             cols="12"
             class="text-h7 text-justify text-decoration-underline font-italic mb-6"
           >
-            Download report
+            <a
+              class="text-decoration-underline font-italic link white--text"
+              href="https://re-sourcing.eu/files/D1.2_in RS template_FINAL.pdf"
+              target="ReportWindow"
+              rel="noopener noreferrer"
+              >Download report</a
+            >
           </v-col>
         </v-row>
 
