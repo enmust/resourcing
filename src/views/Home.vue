@@ -228,6 +228,12 @@
                   <router-link class="link" to="/events?tab=Virtual Conferences"
                     >RE-SOURCING Virtual Event</router-link
                   >
+                  <a
+                    class="text-decoration-none font-weight-bold red--text link ml-1"
+                    href="https://www.eventbrite.at/e/re-sourcing-virtual-event-tickets-119577261809"
+                    target="RegistrationWindow"
+                    >Registration now open!</a
+                  >
                 </li>
 
                 <li>

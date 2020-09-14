@@ -88,7 +88,13 @@
             cols="12"
             class="text-h7 text-justify text-decoration-underline font-italic mb-6"
           >
-            Download Briefing Document
+            <a
+              class="text-decoration-underline font-italic link white--text"
+              href="https://re-sourcing.eu/files/RE-SOURCING-Briefing-1-12.9.20.pdf"
+              target="ReportWindow"
+              rel="noopener noreferrer"
+              >Download Briefing Document</a
+            >
           </v-col>
         </v-row>
       </v-col>
