@@ -81,6 +81,7 @@
         <v-col
           cols="12"
           lg="4"
+          offset-lg="4"
           v-for="(event, index) in virtualEvents"
           :key="index"
         >
@@ -192,8 +193,8 @@ export default {
         text: `
           <div class="text-center font-weight-bold mb-1">Virtual Roadmap Workshop</div>
           <div class="text-center font-weight-bold mb-3" style="font-size: 14px;">Responsible sourcing in the renewable energy supply chain – a reality or still a long way to go?</div>
-          <div class="text-center font-weight-bold mb-3">on 29 October 2020, 1:30-5:00 pm</div>
-          <div class="mb-4">The RE-SOURCING project is aiming to develop a roadmap for the renewable energy sector to achieve a sustainable and responsible value chain. To achieve this goal a virtual roadmap workshop will be held on <b>29 October 2020, 13:30-17:00 CET</b>.</div>
+          <div class="text-center font-weight-bold mb-3">on 29 October 2020, 13:00 - 17:00 CET</div>
+          <div class="mb-4">The RE-SOURCING project is aiming to develop a roadmap for the renewable energy sector to achieve a sustainable and responsible value chain. To achieve this goal a virtual roadmap workshop will be held on <b>29 October 2020, 13:00 - 17:00 CET</b>.</div>
           <div class="font-weight-bold mb-4">At this workshop, our focus will be on:</div>
           <ul class="mb-4">
             <li>mining & processing of copper, rare earth elements, and silicon</li>
@@ -220,19 +221,19 @@ export default {
         <div class="mb-3"><b>The RE-SOURCING project</b> will be hosting its first virtual event on the <b>9th of October, 10:00 to 13:30 CET</b>. This event will outline the responsible sourcing challenges for businesses transitioning their practices, particularly in the face of emerging challenges from Covid-19 and the expected impetus for materials demand resulting from the Green Deal. The event explores the positives and negatives for responsible sourcing in the short, medium and long term.</div>
         <div class="mb-2"><b>Who should attend this event</b>: Given the disruptions in 2020, the social, environmental and economic impacts and consequences for responsible sourcing within mineral supply chains will be of interest to EU business and those who advocate responsible business practices in the mineral sector. As an industry stakeholder, mining company, EU business incorporating responsible sourcing practices and civil society member, you should attend this event to initiate your engagement with the RE-SOURCING project network.</div>
         <div class="text-center font-weight-bold"><a class="link" href="https://www.eventbrite.at/e/re-sourcing-virtual-event-tickets-119577261809" target="RegistrationWindow">Register to the 1st RE-SOURCING Virtual Event here</a></div>`
-      },
-      {
-        title: "Webinars",
-        showInfo: false,
-        text:
-          "2 virtual events will incorporate top-level webcasts, live keynotes, a virtual exhibition, webinars and Q&A bulletin boards and attract over 500 participants from all over the globe."
-      },
-      {
-        title: "Webcasts",
-        showInfo: false,
-        text:
-          "2 virtual events will incorporate top-level webcasts, live keynotes, a virtual exhibition, webinars and Q&A bulletin boards and attract over 500 participants from all over the globe."
       }
+      // {
+      //   title: "Webinars",
+      //   showInfo: false,
+      //   text:
+      //     "2 virtual events will incorporate top-level webcasts, live keynotes, a virtual exhibition, webinars and Q&A bulletin boards and attract over 500 participants from all over the globe."
+      // },
+      // {
+      //   title: "Webcasts",
+      //   showInfo: false,
+      //   text:
+      //     "2 virtual events will incorporate top-level webcasts, live keynotes, a virtual exhibition, webinars and Q&A bulletin boards and attract over 500 participants from all over the globe."
+      // }
     ],
     testImages: [
       "pilt1",

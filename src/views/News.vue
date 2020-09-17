@@ -15,10 +15,14 @@
 
         <v-row class="mt-5">
           <v-col cols="12">
-            <p
-              class="text-h5 white--text font-weight-bold"
-            >
-              Newsletter: September 2020
+            <p class="text-h5 news-link font-weight-bold">
+              <a
+                class="white--text"
+                href="https://mailchi.mp/6330fb173aa0/re-sourcing-newsletter-september-4448302?e=[UNIQID]"
+                target="NewsWindow"
+              >
+                Newsletter: September 2020
+              </a>
             </p>
 
             <p class="text-h7">

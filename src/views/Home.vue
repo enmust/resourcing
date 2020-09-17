@@ -137,7 +137,7 @@
         </v-row>
       </v-col>
 
-      <v-col cols="12" md="3" class="d-flex primary2">
+      <v-col cols="12" md="3" class="primary2">
         <v-row no-gutters class="my-3">
           <v-col cols="12" class="px-5 py-3">
             <v-card>
@@ -156,7 +156,8 @@
                 </li>
               </ul>
 
-              <v-card-text class="px-0 py-2">
+              <!-- Todo: Disabled Twitter feed for now -->
+              <v-card-text class="px-0 py-2" v-if="false">
                 <a
                   class="twitter-timeline"
                   data-height="400"
@@ -203,10 +204,10 @@
                 <v-btn
                   icon
                   aria-label="youtube"
-                  href="https://www.youtube.com/watch?v=_Vyx1wkvTgE"
+                  href="https://www.youtube.com/channel/UCFrqVkfz4yHeDvP3hrgLWbA"
                   target="YoutubeWindow"
                   rel="noopener noreferrer"
-                  title="RE-SOURCING Imagevideo"
+                  title="RE-SOURCING channel"
                 >
                   <v-icon style="color: #FF0000">fab fa-youtube</v-icon>
                 </v-btn>
